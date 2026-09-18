@@ -54,3 +54,15 @@ node_modules
 *.db
 *.sqlite
 *.sqlite3
+
+# AI agents, assistant tools, audit reports & scratch
+.claude/
+.lovable/
+.agents/
+.gemini/
+*-AUDIT.md
+*audit*.md
+seo-audit-skill.md
+*.skill.md
+scratch/
+

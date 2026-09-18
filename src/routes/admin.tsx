@@ -7,6 +7,12 @@ import { useNotificationStore } from "@/hooks/useNotificationStore";
 import logo from "@/assets/parivar-logo.png";
 
 export const Route = createFileRoute("/admin")({
+  head: () => ({
+    meta: [
+      { title: "Parivar OS - Administration" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   beforeLoad: ({ location }) => {
     // We check auth inside the component to use hooks properly, 
     // but typically you'd check auth state here. 

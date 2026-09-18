@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Instagram, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/parivar-logo.png";
 import bgImage from "@/assets/backgroud.png";
 
@@ -52,41 +52,51 @@ export function Footer() {
                 href="https://www.instagram.com/parivar.restaurantnsw/"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram link"
+                aria-label="Parivar Restaurant Instagram"
                 className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-foreground transition-all"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="#"
-                aria-label="Facebook link"
+                href="https://www.facebook.com/people/Parivar-Restaurant/61565578144081/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Parivar Restaurant Facebook"
                 className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-foreground transition-all"
               >
                 <Facebook className="w-4 h-4" />
               </a>
-              <a
-                href="#"
-                aria-label="Twitter link"
-                className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-foreground transition-all"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
             </div>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              {["Home", "Menu", "Catering", "About"].map((l) => (
-                <li key={l}>
-                  <a href={`#${l.toLowerCase()}`} className="hover:text-gold transition-colors">
-                    {l}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/#home" className="hover:text-gold transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="/menu" className="hover:text-gold transition-colors">Menu</a>
+              </li>
+              <li>
+                <a href="/catering" className="hover:text-gold transition-colors">Catering</a>
+              </li>
+              <li>
+                <a href="/#about" className="hover:text-gold transition-colors">About</a>
+              </li>
+              <li>
+                <a href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/terms" className="hover:text-gold transition-colors">Terms of Service</a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-gold/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} Parivar Restaurant. Crafted with reverence.</p>
-          <p className="tracking-widest uppercase">Hyderabad · Sydney</p>
+          <div className="flex gap-6">
+            <a href="/privacy-policy" className="hover:text-gold transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-gold transition-colors">Terms</a>
+            <span className="tracking-widest uppercase">Hyderabad · Sydney</span>
+          </div>
         </div>
       </div>
     </footer>

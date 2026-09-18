@@ -13,6 +13,7 @@ export const Route = createFileRoute('/checkout')({
     meta: [
       { title: "Checkout | Parivar Restaurant" },
       { name: "description", content: "Complete your order at Parivar Restaurant." },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: CheckoutPage,
@@ -49,24 +50,24 @@ function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <main className="min-h-screen bg-background text-foreground pt-32 flex flex-col items-center">
+      <div className="min-h-screen bg-background text-foreground pt-32 flex flex-col items-center">
         <Navbar />
-        <div className="container mx-auto px-6 py-20 text-center">
+        <main id="checkout-content" className="container mx-auto px-6 py-20 text-center flex-1">
           <h1 className="text-3xl font-display text-gold mb-6">Your Cart is Empty</h1>
           <Link to="/menu" className="bg-[#0B5D3B] text-white px-8 py-3 rounded-full hover:bg-gold transition-colors">
             Return to Menu
           </Link>
-        </div>
+        </main>
         <Footer />
-      </main>
+      </div>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[#F6E8D7]/30 text-foreground overflow-x-hidden pt-32 flex flex-col">
+    <div className="min-h-screen bg-[#F6E8D7]/30 text-foreground overflow-x-hidden pt-32 flex flex-col">
       <Navbar />
       
-      <div className="container mx-auto px-6 py-10 flex-1 max-w-7xl">
+      <main id="checkout-content" className="container mx-auto px-6 py-10 flex-1 max-w-7xl">
         <button 
           onClick={() => navigate({ to: '/menu' })}
           className="inline-flex items-center gap-2 text-[#042416] hover:text-[#D4A017] transition-colors font-medium mb-8 group"
@@ -109,7 +110,7 @@ function CheckoutPage() {
                     <input 
                       type="text" 
                       value={tableNumber}
-                      onChange={(e) => setTableNumber(e.target.value)}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTableNumber(e.target.value)}
                       placeholder="e.g. 12" 
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gold/50"
                     />
@@ -120,7 +121,7 @@ function CheckoutPage() {
                   <label className="block text-sm font-medium mb-2">Payment Method</label>
                   <select 
                     value={paymentMethod}
-                    onChange={(e) => setPaymentMethod(e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setPaymentMethod(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white"
                   >
                     <option>Credit Card</option>
@@ -178,7 +179,7 @@ function CheckoutPage() {
           </div>
 
         </div>
-      </div>
+      </main>
 
       {/* Hidden Kitchen Ticket for printing */}
       <div className="hidden">
@@ -190,6 +191,6 @@ function CheckoutPage() {
       </div>
 
       <Footer />
-    </main>
+    </div>
   );
 }

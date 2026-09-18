@@ -9,8 +9,11 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as CateringRouteImport } from './routes/catering'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
@@ -27,6 +30,16 @@ import { Route as AdminCategoriesRouteImport } from './routes/admin/categories'
 import { Route as AdminBillingRouteImport } from './routes/admin/billing'
 import { Route as AdminAddonsRouteImport } from './routes/admin/addons'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MenuRoute = MenuRouteImport.update({
   id: '/menu',
   path: '/menu',
@@ -35,6 +48,11 @@ const MenuRoute = MenuRouteImport.update({
 const CheckoutRoute = CheckoutRouteImport.update({
   id: '/checkout',
   path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CateringRoute = CateringRouteImport.update({
+  id: '/catering',
+  path: '/catering',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -116,8 +134,11 @@ const AdminAddonsRoute = AdminAddonsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
+  '/catering': typeof CateringRoute
   '/checkout': typeof CheckoutRoute
   '/menu': typeof MenuRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms': typeof TermsRoute
   '/admin/addons': typeof AdminAddonsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/categories': typeof AdminCategoriesRoute
@@ -134,8 +155,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/catering': typeof CateringRoute
   '/checkout': typeof CheckoutRoute
   '/menu': typeof MenuRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms': typeof TermsRoute
   '/admin/addons': typeof AdminAddonsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/categories': typeof AdminCategoriesRoute
@@ -154,8 +178,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
+  '/catering': typeof CateringRoute
   '/checkout': typeof CheckoutRoute
   '/menu': typeof MenuRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms': typeof TermsRoute
   '/admin/addons': typeof AdminAddonsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/categories': typeof AdminCategoriesRoute
@@ -175,8 +202,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/admin'
+    | '/catering'
     | '/checkout'
     | '/menu'
+    | '/privacy-policy'
+    | '/terms'
     | '/admin/addons'
     | '/admin/billing'
     | '/admin/categories'
@@ -193,8 +223,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/catering'
     | '/checkout'
     | '/menu'
+    | '/privacy-policy'
+    | '/terms'
     | '/admin/addons'
     | '/admin/billing'
     | '/admin/categories'
@@ -212,8 +245,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/admin'
+    | '/catering'
     | '/checkout'
     | '/menu'
+    | '/privacy-policy'
+    | '/terms'
     | '/admin/addons'
     | '/admin/billing'
     | '/admin/categories'
@@ -232,13 +268,30 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdminRoute: typeof AdminRouteWithChildren
+  CateringRoute: typeof CateringRoute
   CheckoutRoute: typeof CheckoutRoute
   MenuRoute: typeof MenuRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsRoute: typeof TermsRoute
   OrderTrackingOrderIdRoute: typeof OrderTrackingOrderIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/menu': {
       id: '/menu'
       path: '/menu'
@@ -251,6 +304,13 @@ declare module '@tanstack/react-router' {
       path: '/checkout'
       fullPath: '/checkout'
       preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catering': {
+      id: '/catering'
+      path: '/catering'
+      fullPath: '/catering'
+      preLoaderRoute: typeof CateringRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -396,8 +456,11 @@ const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdminRoute: AdminRouteWithChildren,
+  CateringRoute: CateringRoute,
   CheckoutRoute: CheckoutRoute,
   MenuRoute: MenuRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsRoute: TermsRoute,
   OrderTrackingOrderIdRoute: OrderTrackingOrderIdRoute,
 }
 export const routeTree = rootRouteImport

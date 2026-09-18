@@ -83,19 +83,49 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Authentic Hyderabadi fine dining in Sydney — biryani, kebabs, and royal Nizami heritage served as family.",
+          "Authentic Hyderabadi fine dining in Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
       },
       { name: "author", content: "Parivar Restaurant" },
       { property: "og:title", content: "Parivar Restaurant" },
       {
         property: "og:description",
         content:
-          "Authentic Hyderabadi fine dining in Sydney — biryani, kebabs, and royal Nizami heritage served as family.",
+          "Authentic Hyderabadi fine dining in Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:site_name", content: "Parivar Restaurant" },
+      { property: "og:url", content: "https://parivar-restaurant.com" },
+      { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Parivar Restaurant" },
+      {
+        name: "twitter:description",
+        content:
+          "Authentic Hyderabadi fine dining in Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
+      },
+      { name: "theme-color", content: "#042416" },
+      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
     ],
     links: [
+      {
+        rel: "canonical",
+        href: "https://parivar-restaurant.com",
+      },
+      {
+        rel: "manifest",
+        href: "/manifest.json",
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: "/icon-192.png",
+      },
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",

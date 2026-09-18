@@ -14,6 +14,7 @@ export const Route = createFileRoute('/order-tracking/$orderId')({
     meta: [
       { title: "Track Order | Parivar Restaurant" },
       { name: "description", content: "Track the status of your Parivar Restaurant order." },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: OrderTrackingPage,
@@ -104,30 +105,30 @@ function OrderTrackingPage() {
 
   if (isLoading) {
     return (
-      <main className="min-h-screen bg-[#F6E8D7]/30 text-foreground pt-32 flex flex-col justify-between">
+      <div className="min-h-screen bg-[#F6E8D7]/30 text-foreground pt-32 flex flex-col justify-between">
         <Navbar />
-        <div className="flex-1 flex flex-col items-center justify-center py-20">
+        <main id="tracking-content" className="flex-1 flex flex-col items-center justify-center py-20">
           <Loader2 className="w-12 h-12 text-[#0B5D3B] animate-spin mb-4" />
           <p className="text-muted-foreground font-medium">Retrieving order tracking info...</p>
-        </div>
+        </main>
         <Footer />
-      </main>
+      </div>
     );
   }
 
   if (error || !order) {
     return (
-      <main className="min-h-screen bg-[#F6E8D7]/30 text-foreground pt-32 flex flex-col justify-between">
+      <div className="min-h-screen bg-[#F6E8D7]/30 text-foreground pt-32 flex flex-col justify-between">
         <Navbar />
-        <div className="container mx-auto px-6 py-20 text-center flex-1 max-w-md flex flex-col justify-center items-center">
+        <main id="tracking-content" className="container mx-auto px-6 py-20 text-center flex-1 max-w-md flex flex-col justify-center items-center">
           <h1 className="text-3xl font-display text-gold mb-4">Order Not Found</h1>
           <p className="text-muted-foreground mb-8">We couldn't retrieve the status of order #{orderId}. Please contact our staff.</p>
           <Link to="/menu" className="bg-[#0B5D3B] text-white px-8 py-3 rounded-full hover:bg-gold transition-colors font-medium">
             Return to Menu
           </Link>
-        </div>
+        </main>
         <Footer />
-      </main>
+      </div>
     );
   }
 
@@ -151,10 +152,10 @@ function OrderTrackingPage() {
   const currentStatusIndex = statuses.indexOf(order.status === 'CLOSED' ? 'COMPLETED' : order.status);
 
   return (
-    <main className="min-h-screen bg-[#F6E8D7]/30 text-foreground overflow-x-hidden pt-32 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#F6E8D7]/30 text-foreground overflow-x-hidden pt-32 flex flex-col justify-between">
       <Navbar />
 
-      <div className="container mx-auto px-6 py-10 flex-1 max-w-4xl">
+      <main id="tracking-content" className="container mx-auto px-6 py-10 flex-1 max-w-4xl">
         <Link 
           to="/menu"
           className="inline-flex items-center gap-2 text-[#042416] hover:text-[#D4A017] transition-colors font-medium mb-8 group"
@@ -391,7 +392,7 @@ function OrderTrackingPage() {
 
           </div>
         </div>
-      </div>
+      </main>
 
       <Footer />
 
@@ -448,6 +449,6 @@ function OrderTrackingPage() {
           </div>
         )}
       </AnimatePresence>
-    </main>
+    </div>
   );
 }

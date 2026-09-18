@@ -8,25 +8,6 @@ import { useCartStore } from "@/store/cart";
 import { resolveImageUrl } from "@/utils/imageUrl";
 import logo from "@/assets/parivar-logo.png";
 
-export const Route = createFileRoute("/menu")({
-  validateSearch: (search: Record<string, unknown>): { category?: string } => {
-    return {
-      category: (search.category as string) || undefined,
-    };
-  },
-  head: () => ({
-    meta: [
-      { title: "Menu | Parivar Restaurant" },
-      {
-        name: "description",
-        content:
-          "Explore the authentic Indian and Hyderabadi menu at Parivar Restaurant in Sydney. Delicious biryani, curries, and tandoori.",
-      },
-    ],
-  }),
-  component: MenuPage,
-});
-
 const fallbackMenuData: Record<
   string,
   { name: string; desc: string; price: number; image_url: string }[]
@@ -312,10 +293,126 @@ const fallbackMenuData: Record<
 
 const categories = Object.keys(fallbackMenuData);
 
+
+export const Route = createFileRoute("/menu")({
+  validateSearch: (search: Record<string, unknown>): { category?: string } => {
+    return {
+      category: (search.category as string) || undefined,
+    };
+  },
+  loaderDeps: ({ search: { category } }) => ({ category }),
+  loader: async ({ deps: { category } }) => {
+    const activeCategory = category && categories.includes(category) ? category : "Entrée";
+    let items = fallbackMenuData[activeCategory as keyof typeof fallbackMenuData] || [];
+    try {
+      const apiUrl = process.env.VITE_API_URL || "https://parivar-restaurant-final.onrender.com";
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
+      const res = await fetch(`${apiUrl}/api/v1/menu/?category=${encodeURIComponent(activeCategory)}`, {
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          items = data;
+        }
+      }
+    } catch {
+      // Fallback immediately on network or cold start timeout
+    }
+    return {
+      items,
+      activeCategory,
+    };
+  },
+  head: ({ loaderData }: { loaderData?: { items?: any[]; activeCategory?: string } }) => {
+    const activeCat = loaderData?.activeCategory || "Entrée";
+    const items = loaderData?.items || fallbackMenuData[activeCat as keyof typeof fallbackMenuData] || [];
+    const canonicalUrl = `https://parivar-restaurant.com/menu${activeCat !== "Entrée" ? `?category=${encodeURIComponent(activeCat)}` : ""}`;
+    return {
+      meta: [
+        { title: `${activeCat} Menu - Parivar Restaurant Sydney` },
+        {
+          name: "description",
+          content: `Explore our authentic ${activeCat} selection at Parivar Restaurant in Wiley Park, Sydney. 100% Halal certified, crafted with royal Nizami spices, open until 3:00 AM.`,
+        },
+        { property: "og:title", content: `${activeCat} Menu - Parivar Restaurant Sydney` },
+        {
+          property: "og:description",
+          content: `Explore authentic ${activeCat} at Parivar Restaurant in Sydney. Delicious biryani, curries, and tandoori served fresh until 3:00 AM.`,
+        },
+        { property: "og:url", content: canonicalUrl },
+        { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      ],
+      links: [
+        {
+          rel: "canonical",
+          href: canonicalUrl,
+        },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": `${activeCat} - Parivar Restaurant Menu`,
+            "description": `Authentic ${activeCat} available for dine-in, takeaway, and catering at Parivar Restaurant Sydney.`,
+            "numberOfItems": items.length,
+            "itemListElement": items.map((item: any, index: number) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "MenuItem",
+                "name": item.name,
+                "description": item.description || item.desc || "",
+                "offers": {
+                  "@type": "Offer",
+                  "price": item.price,
+                  "priceCurrency": "AUD",
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            }))
+          })
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://parivar-restaurant.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Menu",
+                "item": "https://parivar-restaurant.com/menu"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": activeCat,
+                "item": canonicalUrl
+              }
+            ]
+          })
+        }
+      ],
+    };
+  },
+  component: MenuPage,
+});
+
 function MenuPage() {
+  const loaderData = Route.useLoaderData();
   const { category } = Route.useSearch();
-  const [items, setItems] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
   const cartItems = useCartStore((state) => state.items);
   const addItem = useCartStore((state) => state.addItem);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
@@ -323,12 +420,26 @@ function MenuPage() {
   // Fallback if an invalid category is somehow provided in URL
   const activeCategory = category && categories.includes(category) ? category : "Entrée";
 
+  // Pre-populate with SSR loader data or fallback immediately so SSR is never empty
+  const [items, setItems] = useState<any[]>(
+    loaderData?.activeCategory === activeCategory && loaderData?.items?.length
+      ? loaderData.items
+      : fallbackMenuData[activeCategory as keyof typeof fallbackMenuData] || []
+  );
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    if (loaderData?.activeCategory === activeCategory && loaderData?.items?.length) {
+      setItems(loaderData.items);
+      setLoading(false);
+      return;
+    }
+
     const fetchMenu = async () => {
       try {
         setLoading(true);
         const res = await fetch(
-          `${import.meta.env.VITE_API_URL || (import.meta.env.VITE_API_URL || "http://localhost:8000") + ""}/api/v1/menu?category=${activeCategory}`,
+          `${import.meta.env.VITE_API_URL || "https://parivar-restaurant-final.onrender.com"}/api/v1/menu/?category=${encodeURIComponent(activeCategory)}`,
         );
         if (!res.ok) throw new Error("Network response was not ok");
         const data = await res.json();
@@ -338,29 +449,38 @@ function MenuPage() {
         } else {
           setItems(fallbackMenuData[activeCategory as keyof typeof fallbackMenuData] || []);
         }
-      } catch (err) {
-        console.error("Failed to fetch from FastAPI backend, using fallback data:", err);
+      } catch {
         setItems(fallbackMenuData[activeCategory as keyof typeof fallbackMenuData] || []);
       } finally {
         setLoading(false);
       }
     };
     fetchMenu();
-  }, [activeCategory]);
+  }, [activeCategory, loaderData]);
 
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-x-hidden pt-32 flex flex-col">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden pt-32 flex flex-col">
       <Navbar />
 
-      <div className="container mx-auto px-6 py-10 flex-1 max-w-4xl">
-        <Link
-          to="/"
-          hash="menu"
-          className="inline-flex items-center gap-2 text-[#042416] hover:text-[#D4A017] transition-colors font-medium mb-10 group"
-        >
-          <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
-          Back to Categories
-        </Link>
+      <main id="menu-content" className="container mx-auto px-6 py-10 flex-1 max-w-4xl">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link to="/" className="hover:text-gold transition-colors">Home</Link>
+            <span className="text-gold/40">/</span>
+            <Link to="/" hash="menu" className="hover:text-gold transition-colors">Menu</Link>
+            <span className="text-gold/40">/</span>
+            <span className="text-gold font-medium" aria-current="page">{activeCategory}</span>
+          </nav>
+
+          <Link
+            to="/"
+            hash="menu"
+            className="inline-flex items-center gap-2 text-[#042416] hover:text-[#D4A017] transition-colors font-medium group text-sm"
+          >
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            All Categories
+          </Link>
+        </div>
 
         <div className="mb-12 text-center">
           <div className="gold-divider mb-4 justify-center">
@@ -368,6 +488,9 @@ function MenuPage() {
             <span className="h-px w-10 bg-gold/40" />
           </div>
           <h1 className="font-display text-5xl md:text-6xl text-gold">{activeCategory}</h1>
+          <h2 className="text-sm uppercase tracking-widest text-muted-foreground mt-2">
+            Authentic Hyderabadi &amp; Indian Specialties
+          </h2>
         </div>
 
         <AnimatePresence mode="wait">
@@ -469,9 +592,9 @@ function MenuPage() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </main>
 
       <Footer />
-    </main>
+    </div>
   );
 }

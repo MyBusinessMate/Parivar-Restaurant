@@ -48,7 +48,7 @@ export function Navbar() {
         <nav className="w-full flex items-center justify-between">
           <div className="flex items-center gap-2  shrink-0">
             <Link to="/" hash="home" className="flex items-center">
-              <img src={logo} alt="Parivar Restaurant — Timeless Indian Flavours" className="h-14 md:h-[4.5rem] w-auto object-contain drop-shadow-sm rounded-[50%]" />
+              <img src={logo} alt="Parivar Restaurant - Timeless Indian Flavours" className="h-14 md:h-[4.5rem] w-auto object-contain drop-shadow-sm rounded-[50%]" />
             </Link>
             <HalalBadge className="h-20 md:h-[5.5rem]" />
           </div>

@@ -5,6 +5,12 @@ import { Lock, User } from "lucide-react";
 import logo from "@/assets/parivar-logo.png";
 
 export const Route = createFileRoute("/admin/login")({
+  head: () => ({
+    meta: [
+      { title: "Sign In - Parivar OS" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: AdminLogin,
 });
 

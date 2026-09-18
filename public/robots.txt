@@ -1,18 +1,50 @@
 User-agent: *
 Allow: /
-
-# Prevent indexing of admin and backend related pages
 Disallow: /admin
-Disallow: /admin/*
 Disallow: /checkout
 Disallow: /order-tracking
 
-# AI Crawlers - Allow by default but explicit definition
+# AI Crawlers - Explicit allowances for search & generative answer discovery
 User-agent: GPTBot
 Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
+
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
+
 User-agent: CCBot
 Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order-tracking
 
 Sitemap: https://parivar-restaurant.com/sitemap.xml

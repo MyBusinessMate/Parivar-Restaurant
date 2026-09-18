@@ -1,0 +1,30 @@
+{
+  "name": "Parivar Restaurant",
+  "short_name": "Parivar",
+  "description": "Authentic Hyderabadi Fine Dining & Late-Night Restaurant in Wiley Park, Sydney. 100% Halal Certified.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#042416",
+  "theme_color": "#042416",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "categories": ["food", "restaurants", "dining"]
+}
