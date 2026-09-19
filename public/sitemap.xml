@@ -52,12 +52,6 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Entr%C3%A9e</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://parivar-restaurant.com/menu?category=Naan%20Bread</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>

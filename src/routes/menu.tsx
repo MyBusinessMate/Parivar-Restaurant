@@ -467,7 +467,7 @@ function MenuPage() {
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link to="/" className="hover:text-gold transition-colors">Home</Link>
             <span className="text-gold/40">/</span>
-            <Link to="/" hash="menu" className="hover:text-gold transition-colors">Menu</Link>
+            <Link to="/menu" className="hover:text-gold transition-colors">Menu</Link>
             <span className="text-gold/40">/</span>
             <span className="text-gold font-medium" aria-current="page">{activeCategory}</span>
           </nav>

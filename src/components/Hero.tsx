@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-// import heroBg from "@/assets/hero-restaurant.jpg";
 import heroBg from "@/assets/biryani.mp4";
+import heroPoster from "@/assets/hero-restaurant.jpg";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,19 +14,14 @@ export function Hero() {
     <section id="home" ref={ref} className="relative min-h-screen overflow-hidden flex items-center justify-center">
       {/* Background */}
       <motion.div style={{ scale }} className="absolute inset-0">
-        {/* <img
-          src={heroBg}
-          alt="Parivar luxury dining interior"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        /> */}
         <video
           src={heroBg}
+          poster={heroPoster}
           autoPlay
           loop
           muted
-          controls= {false}
+          playsInline
+          controls={false}
           className="w-full h-[100vh] md:h-screen object-cover scale-[1.02]"
           width={1920}
           height={1080}

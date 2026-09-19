@@ -18,6 +18,13 @@ export const Route = createFileRoute("/terms")({
       },
       { property: "og:url", content: "https://parivar-restaurant.com/terms" },
       { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Terms of Service - Parivar Restaurant" },
+      {
+        name: "twitter:description",
+        content: "Terms and conditions for dining, online ordering, and catering at Parivar Restaurant.",
+      },
+      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
     ],
     links: [
       {

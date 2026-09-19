@@ -18,6 +18,13 @@ export const Route = createFileRoute("/privacy-policy")({
       },
       { property: "og:url", content: "https://parivar-restaurant.com/privacy-policy" },
       { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Privacy Policy - Parivar Restaurant" },
+      {
+        name: "twitter:description",
+        content: "Learn how Parivar Restaurant protects your personal information.",
+      },
+      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
     ],
     links: [
       {

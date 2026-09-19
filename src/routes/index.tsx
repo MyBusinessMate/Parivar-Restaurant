@@ -28,6 +28,13 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "https://parivar-restaurant.com" },
       { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Parivar Restaurant - Timeless Indian Flavours in Sydney" },
+      {
+        name: "twitter:description",
+        content: "Authentic Hyderabadi luxury dining in Sydney. Dine in, take away, or book catering.",
+      },
+      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
     ],
     links: [
       {
@@ -70,7 +77,7 @@ export const Route = createFileRoute("/")({
           "servesCuisine": ["Indian", "Hyderabadi", "Halal"],
           "priceRange": "$$",
           "hasMenu": "https://parivar-restaurant.com/menu",
-          "acceptsReservations": "True",
+          "acceptsReservations": true,
           "currenciesAccepted": "AUD",
           "paymentAccepted": "Cash, Credit Card, EFTPOS",
           "sameAs": [
@@ -127,8 +134,12 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": "https://parivar-restaurant.com/#website",
           "name": "Parivar Restaurant",
           "url": "https://parivar-restaurant.com",
+          "publisher": {
+            "@id": "https://parivar-restaurant.com/#restaurant"
+          },
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://parivar-restaurant.com/menu?category={search_term_string}",

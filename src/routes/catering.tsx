@@ -47,6 +47,7 @@ export const Route = createFileRoute("/catering")({
           "serviceType": "Catering Service",
           "provider": {
             "@type": "Restaurant",
+            "@id": "https://parivar-restaurant.com/#restaurant",
             "name": "Parivar Restaurant",
             "telephone": "+61 405 635 423",
             "url": "https://parivar-restaurant.com",

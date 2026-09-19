@@ -108,10 +108,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       {
-        rel: "canonical",
-        href: "https://parivar-restaurant.com",
-      },
-      {
         rel: "manifest",
         href: "/manifest.json",
       },
