@@ -38,20 +38,21 @@ export function About() {
           <p className="text-muted-foreground leading-loose mb-6">
             <span className="text-gold font-display text-2xl">Parivar</span> — meaning <em>family</em> — was born from a longing
             for the bustling kitchens of old Hyderabad. From the cobbled lanes of Charminar to
-            the harbour lights of Sydney, we have carried recipes whispered down generations,
-            each spice measured by hand, each biryani sealed with reverence.
+            the heart of Wiley Park in South West Sydney, we carry recipes passed down through generations,
+            each spice measured with precision, each dum biryani handi sealed with whole wheat dough and cooked over slow embers.
+          </p>
+          <p className="text-muted-foreground leading-loose mb-6">
+            Every dish on our table tells an authentic story — of royal Nizami feasts, slow-simmered haleem, clay-tandoor charred kebabs, and delicate saffron-scented desserts. To dine with us is to experience warm Indian hospitality where every guest is welcomed as kin.
           </p>
           <p className="text-muted-foreground leading-loose mb-10">
-            Every dish on our table tells a story — of Nizami nobility, of monsoon afternoons,
-            of grandmothers and their secrets. To dine with us is to be welcomed not as a guest,
-            but as kin.
+            Conveniently located at 1/83 King Georges Road, Wiley Park, Parivar is 100% Halal certified and open 7 days a week from 3:00 PM until 3:00 AM. Whether you join us for late-night family dining, pick up a fresh takeaway feast, or book bespoke catering for Sydney weddings and corporate celebrations, we bring genuine royal Nizami flavours to your table.
           </p>
 
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gold/20">
             {[
-              { num: "1947", label: "Recipes Since" },
-              { num: "200+", label: "Dishes Curated" },
-              { num: "10K+", label: "Happy Families" },
+              { num: "100%", label: "Halal Certified" },
+              { num: "3 AM", label: "Open Daily Until" },
+              { num: "Sydney", label: "Wide Catering" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="font-display text-3xl text-gold mb-1">{s.num}</div>

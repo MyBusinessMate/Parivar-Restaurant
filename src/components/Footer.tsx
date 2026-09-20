@@ -9,7 +9,7 @@ export function Footer() {
       
       {/* Centered Background Watermark */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-20" aria-hidden="true">
-        <img src={bgImage} alt="" aria-hidden="true" className="w-[800px] h-[800px] object-contain mix-blend-multiply" />
+        <img src={bgImage} alt="Parivar decorative traditional watermark" aria-hidden="true" className="w-[800px] h-[800px] object-contain mix-blend-multiply" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
