@@ -65,4 +65,4 @@ node_modules
 seo-audit-skill.md
 *.skill.md
 scratch/
-
+.playwright-mcp/
