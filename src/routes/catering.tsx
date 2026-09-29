@@ -20,8 +20,8 @@ export const Route = createFileRoute("/catering")({
         content:
           "Experience royal Nizami banquets crafted for your special day. Authentic slow-cooked biryani, kebabs, and dessert spreads across Greater Sydney.",
       },
-      { property: "og:url", content: "https://parivar-restaurant.com/catering" },
-      { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { property: "og:url", content: "https://parivar.restaurant/catering" },
+      { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Royal Indian & Halal Catering Sydney - Parivar Restaurant" },
       {
@@ -29,12 +29,12 @@ export const Route = createFileRoute("/catering")({
         content:
           "Award-winning Halal Indian & Mughlai catering in Sydney. Live tandoor, authentic dum biryani, and dessert buffets.",
       },
-      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
     links: [
       {
         rel: "canonical",
-        href: "https://parivar-restaurant.com/catering",
+        href: "https://parivar.restaurant/catering",
       },
     ],
     scripts: [
@@ -47,10 +47,10 @@ export const Route = createFileRoute("/catering")({
           "serviceType": "Catering Service",
           "provider": {
             "@type": "Restaurant",
-            "@id": "https://parivar-restaurant.com/#restaurant",
+            "@id": "https://parivar.restaurant/#restaurant",
             "name": "Parivar Restaurant",
             "telephone": "+61 405 635 423",
-            "url": "https://parivar-restaurant.com",
+            "url": "https://parivar.restaurant",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "1/83 King Georges Rd",
@@ -97,13 +97,13 @@ export const Route = createFileRoute("/catering")({
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://parivar-restaurant.com/"
+              "item": "https://parivar.restaurant/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Catering",
-              "item": "https://parivar-restaurant.com/catering"
+              "item": "https://parivar.restaurant/catering"
             }
           ]
         })

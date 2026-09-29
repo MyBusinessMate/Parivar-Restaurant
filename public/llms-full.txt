@@ -1,0 +1,47 @@
+# Parivar Restaurant — AI & Machine-Readable Knowledge Profile
+
+## Entity Overview
+- Name: Parivar Restaurant
+- Cuisine Type: Authentic Hyderabadi, Indian, Mughlai
+- Dietary Standard: 100% Halal certified
+- Operating Format: Dine-in, Takeaway, Online Ordering, Bespoke Event Catering
+- Address: 1/83 King Georges Rd, Wiley Park NSW 2195, Sydney, Australia
+- Region: Canterbury-Bankstown, South West Sydney
+- Telephone: +61 405 635 423
+- Canonical Website: https://parivar.restaurant
+- Coordinates: Latitude -33.9189, Longitude 151.0667
+
+## Direct Entity Summary
+Parivar Restaurant in Wiley Park, Sydney serves authentic Halal-certified Hyderabadi biryani, Mughlai curries, tandoori grills, and traditional desserts daily from 3:00 PM to 3:00 AM.
+
+## Verified Operating Schedule
+- Monday: 3:00 PM to 3:00 AM (Late night)
+- Tuesday: 3:00 PM to 3:00 AM (Late night)
+- Wednesday: 3:00 PM to 3:00 AM (Late night)
+- Thursday: 3:00 PM to 3:00 AM (Late night)
+- Friday: 3:00 PM to 3:00 AM (Late night)
+- Saturday: 3:00 PM to 3:00 AM (Late night)
+- Sunday: 3:00 PM to 3:00 AM (Late night)
+
+## Core Food & Menu Categories
+- Entrée & Tandoor: Tandoori Chicken, Chicken Tikka, Sheekh Kebab, Fish Fry (Basa), Chicken 65, Mutton Haleem
+- Naan Breads: Plain Naan, Butter Naan, Garlic Naan
+- Savory Starters: Samosas, Steamed Momos, Vegetable Rolls
+- Chicken Curries: Butter Chicken, Achari Chicken, Chicken Khorma, Parivar Special Chicken Gravy, Chicken Vindaloo, Chicken Masala
+- Mutton Curries: Mutton Vindaloo, Mutton Khorma, Mutton Masala
+- Vegetarian Curries: Daal Tadka, Mixed Vegetable Curry, Paneer Tikka Masala
+- Desi Chinese: Chicken & Veg Fried Rice, Chicken & Veg Fry Noodles, Manchurian
+- Desserts: Gulab Jamun, Qubani, Rasmalai, Shahi Tukda, Zafrani Kheer, Khowa Puri
+- Beverages: Authentic Spiced Chai, Sweet Mango Lassi
+
+## Catering Services
+- Coverage: Weddings, corporate functions, private gatherings, and community events across Greater Sydney
+- Service Capabilities: Live clay-tandoor setups, sealed royal dum biryani handis, multi-course banquet buffets
+- Inquiries: Via website (https://parivar.restaurant/catering) or telephone (+61 405 635 423)
+
+## Official Controlled Profiles
+- Instagram: https://www.instagram.com/parivar.restaurantnsw/
+- Facebook: https://www.facebook.com/people/Parivar-Restaurant/61565578144081/
+
+## Robots and Machine Access
+Machine-readable discovery is fully governed under https://parivar.restaurant/robots.txt and https://parivar.restaurant/sitemap.xml

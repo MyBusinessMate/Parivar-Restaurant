@@ -16,20 +16,20 @@ export const Route = createFileRoute("/privacy-policy")({
         property: "og:description",
         content: "Learn how Parivar Restaurant protects your personal information.",
       },
-      { property: "og:url", content: "https://parivar-restaurant.com/privacy-policy" },
-      { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { property: "og:url", content: "https://parivar.restaurant/privacy-policy" },
+      { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Privacy Policy - Parivar Restaurant" },
       {
         name: "twitter:description",
         content: "Learn how Parivar Restaurant protects your personal information.",
       },
-      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
     links: [
       {
         rel: "canonical",
-        href: "https://parivar-restaurant.com/privacy-policy",
+        href: "https://parivar.restaurant/privacy-policy",
       },
     ],
     scripts: [
@@ -43,13 +43,13 @@ export const Route = createFileRoute("/privacy-policy")({
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://parivar-restaurant.com/"
+              "item": "https://parivar.restaurant/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Privacy Policy",
-              "item": "https://parivar-restaurant.com/privacy-policy"
+              "item": "https://parivar.restaurant/privacy-policy"
             }
           ]
         })

@@ -2,100 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://parivar-restaurant.com/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://parivar-restaurant.com/parivar-logo.png</image:loc>
+      <image:loc>https://parivar.restaurant/parivar-logo.png</image:loc>
       <image:title>Parivar Restaurant Logo</image:title>
       <image:caption>Authentic Royal Nizami Indian Restaurant in Sydney</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://parivar-restaurant.com/menu-images/Chicken%20Curries/butter%20chicken.png</image:loc>
+      <image:loc>https://parivar.restaurant/menu-images/Chicken%20Curries/butter%20chicken.png</image:loc>
       <image:title>Butter Chicken Curry</image:title>
       <image:caption>Rich and authentic Nizami butter chicken curry</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://parivar-restaurant.com/menu-images/Entree/chicken%20tikka.png</image:loc>
+      <image:loc>https://parivar.restaurant/menu-images/Entree/chicken%20tikka.png</image:loc>
       <image:title>Chicken Tikka</image:title>
       <image:caption>Boneless marinated chicken pieces grilled in tandoor</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/catering</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/catering</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://parivar-restaurant.com/parivar-logo.png</image:loc>
+      <image:loc>https://parivar.restaurant/parivar-logo.png</image:loc>
       <image:title>Parivar Royal Indian Catering</image:title>
       <image:caption>Full-service wedding and event catering in Sydney</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/privacy-policy</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/privacy-policy</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/terms</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/terms</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Naan%20Bread</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Naan%20Bread</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Savory%20Items</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Savory%20Items</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Chicken%20Curries</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Chicken%20Curries</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Mutton%20Curries</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Mutton%20Curries</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Vegetarian%20Curries</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Vegetarian%20Curries</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Desi%20Chinese</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Desi%20Chinese</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Desserts</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Desserts</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parivar-restaurant.com/menu?category=Drinks</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://parivar.restaurant/menu?category=Drinks</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

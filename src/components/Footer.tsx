@@ -27,11 +27,14 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Visit Us</h4>
             <p className="text-sm text-muted-foreground flex items-start gap-3 mb-3">
               <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-              <span>1/83 King Georges Rd, Wiley Park<br />NSW 2195, Australia</span>
+              <span>1/83 King Georges Rd, Wiley Park<br />NSW 2195, Sydney, Australia</span>
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-3">
               <Phone className="w-4 h-4 text-gold" />
               +61 405 635 423
+            </p>
+            <p className="text-xs text-muted-foreground/80 mt-3 leading-relaxed">
+              Located in Wiley Park, Canterbury-Bankstown, serving authentic Halal Indian dining across South West Sydney.
             </p>
           </div>
 

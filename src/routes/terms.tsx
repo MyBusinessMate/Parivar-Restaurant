@@ -16,20 +16,20 @@ export const Route = createFileRoute("/terms")({
         property: "og:description",
         content: "Terms and conditions for dining, online ordering, and catering at Parivar Restaurant.",
       },
-      { property: "og:url", content: "https://parivar-restaurant.com/terms" },
-      { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { property: "og:url", content: "https://parivar.restaurant/terms" },
+      { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Terms of Service - Parivar Restaurant" },
       {
         name: "twitter:description",
         content: "Terms and conditions for dining, online ordering, and catering at Parivar Restaurant.",
       },
-      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
     links: [
       {
         rel: "canonical",
-        href: "https://parivar-restaurant.com/terms",
+        href: "https://parivar.restaurant/terms",
       },
     ],
     scripts: [
@@ -43,13 +43,13 @@ export const Route = createFileRoute("/terms")({
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://parivar-restaurant.com/"
+              "item": "https://parivar.restaurant/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Terms of Service",
-              "item": "https://parivar-restaurant.com/terms"
+              "item": "https://parivar.restaurant/terms"
             }
           ]
         })

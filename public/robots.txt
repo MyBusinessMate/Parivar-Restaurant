@@ -47,4 +47,4 @@ Disallow: /admin
 Disallow: /checkout
 Disallow: /order-tracking
 
-Sitemap: https://parivar-restaurant.com/sitemap.xml
+Sitemap: https://parivar.restaurant/sitemap.xml

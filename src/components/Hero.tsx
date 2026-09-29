@@ -78,17 +78,20 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="font-display text-7xl sm:text-8xl md:text-[10rem] leading-[0.95] mb-6"
+            className="font-display text-7xl sm:text-8xl md:text-[9rem] leading-[0.95] mb-4"
           >
-            <span className="text-gold-gradient">PARIVAR</span>
+            <span className="text-gold-gradient block">PARIVAR</span>
+            <span className="block text-xl sm:text-2xl md:text-3xl font-normal tracking-wide text-cream/95 mt-2">
+              Authentic Halal Hyderabadi &amp; Indian Dining in Wiley Park, Sydney
+            </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="font-display italic text-xl sm:text-2xl md:text-3xl text-cream/90 mb-12"
+            transition={{ duration: 1, delay: 0.9 }}
+            className="text-base sm:text-lg text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
           >
-            Timeless Indian Flavours in Sydney
+            Located at 1/83 King Georges Road in Wiley Park, Parivar Restaurant serves authentic slow-cooked dum biryani, royal haleem, clay-tandoor kebabs, and rich curries. Open daily from 3:00 PM to 3:00 AM for dine-in, takeaway, and Sydney-wide event catering.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

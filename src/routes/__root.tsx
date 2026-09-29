@@ -79,32 +79,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Parivar Restaurant" },
+      { title: "Parivar Restaurant | Authentic Halal Indian & Hyderabadi Dining in Sydney" },
       {
         name: "description",
         content:
-          "Authentic Hyderabadi fine dining in Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai curries, tandoori grills, and late-night dining open daily until 3:00 AM.",
       },
       { name: "author", content: "Parivar Restaurant" },
-      { property: "og:title", content: "Parivar Restaurant" },
+      { property: "og:title", content: "Parivar Restaurant | Authentic Halal Indian & Hyderabadi Dining in Sydney" },
       {
         property: "og:description",
         content:
-          "Authentic Hyderabadi fine dining in Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai curries, tandoori grills, and late-night dining open daily until 3:00 AM.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Parivar Restaurant" },
-      { property: "og:url", content: "https://parivar-restaurant.com" },
-      { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { property: "og:url", content: "https://parivar.restaurant" },
+      { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Parivar Restaurant" },
+      { name: "twitter:title", content: "Parivar Restaurant | Authentic Halal Indian & Hyderabadi Dining in Sydney" },
       {
         name: "twitter:description",
         content:
-          "Authentic Hyderabadi fine dining in Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai curries, tandoori grills, and late-night dining open daily until 3:00 AM.",
       },
       { name: "theme-color", content: "#042416" },
-      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "DC.title", content: "Parivar Restaurant — Halal Hyderabadi Indian Dining, Wiley Park, Sydney" },
+      { name: "DC.description", content: "Parivar Restaurant in Wiley Park, Sydney serves authentic Halal Hyderabadi biryani and Mughlai specialties open daily until 3AM." },
+      { name: "DC.subject", content: "Indian Restaurant, Halal Food, Hyderabadi Cuisine, Sydney, Wiley Park" },
+      { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
     links: [
       {
@@ -162,7 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-AU">
       <head>
         <HeadContent />
       </head>

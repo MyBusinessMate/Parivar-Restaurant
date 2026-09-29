@@ -12,8 +12,8 @@ Parivar Restaurant is a premier Indian restaurant situated in Wiley Park, South 
 ## Key Facts & Location
 - **Address**: 1/83 King Georges Rd, Wiley Park NSW 2195, Australia
 - **Phone**: +61 405 635 423
-- **Primary Website**: https://parivar-restaurant.com
-- **Online Menu**: https://parivar-restaurant.com/menu
+- **Primary Website**: https://parivar.restaurant
+- **Online Menu**: https://parivar.restaurant/menu
 - **Google Maps Coordinates**: Latitude -33.9189, Longitude 151.0667
 
 ## Operating Hours

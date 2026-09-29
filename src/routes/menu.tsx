@@ -329,7 +329,7 @@ export const Route = createFileRoute("/menu")({
   head: ({ loaderData }: { loaderData?: { items?: any[]; activeCategory?: string } }) => {
     const activeCat = loaderData?.activeCategory || "Entrée";
     const items = loaderData?.items || fallbackMenuData[activeCat as keyof typeof fallbackMenuData] || [];
-    const canonicalUrl = `https://parivar-restaurant.com/menu${activeCat !== "Entrée" ? `?category=${encodeURIComponent(activeCat)}` : ""}`;
+    const canonicalUrl = `https://parivar.restaurant/menu${activeCat !== "Entrée" ? `?category=${encodeURIComponent(activeCat)}` : ""}`;
     return {
       meta: [
         { title: `${activeCat} Menu - Parivar Restaurant Sydney` },
@@ -343,7 +343,7 @@ export const Route = createFileRoute("/menu")({
           content: `Explore authentic ${activeCat} at Parivar Restaurant in Sydney. Delicious biryani, curries, and tandoori served fresh until 3:00 AM.`,
         },
         { property: "og:url", content: canonicalUrl },
-        { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+        { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       ],
       links: [
         {
@@ -387,13 +387,13 @@ export const Route = createFileRoute("/menu")({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://parivar-restaurant.com/"
+                "item": "https://parivar.restaurant/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Menu",
-                "item": "https://parivar-restaurant.com/menu"
+                "item": "https://parivar.restaurant/menu"
               },
               {
                 "@type": "ListItem",

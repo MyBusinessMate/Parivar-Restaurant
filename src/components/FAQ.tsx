@@ -8,14 +8,14 @@ export const faqData = [
       "Yes, Parivar Restaurant is strictly 100% Halal certified. All our meats (chicken, lamb, goat, and beef), ingredients, and traditional preparation methods comply fully with Islamic dietary laws.",
   },
   {
-    question: "What are your opening hours in Wiley Park?",
+    question: "What time does Parivar close and are you open late at night in Wiley Park?",
     answer:
-      "We are open 7 days a week, Monday through Sunday, from 3:00 PM in the afternoon until 3:00 AM late at night. We are proud to be one of Sydney's premier late-night dining destinations.",
+      "Parivar Restaurant is open 7 days a week, Monday through Sunday, from 3:00 PM in the afternoon until 3:00 AM late at night. We offer full late-night dine-in and takeaway in Wiley Park.",
   },
   {
     question: "Where is Parivar Restaurant located and what parking is available?",
     answer:
-      "We are located at 1/83 King Georges Rd, Wiley Park NSW 2195, in South West Sydney. Street parking is available nearby on King Georges Road and adjacent side streets, and we are within walking distance from Wiley Park railway station.",
+      "We are located at 1/83 King Georges Rd, Wiley Park NSW 2195, in South West Sydney. Street parking is available nearby on King Georges Road and adjacent side streets, and we are within easy walking distance from Wiley Park railway station.",
   },
   {
     question: "What are your signature Hyderabadi specialties?",
@@ -30,7 +30,17 @@ export const faqData = [
   {
     question: "Can I order online for takeaway or dine-in table ordering?",
     answer:
-      "Yes, our complete menu is available for online ordering directly on our website. You can select takeaway or specify your table number for direct table service with live status tracking.",
+      "Yes, our complete menu is available for online ordering directly on our website. You can select takeaway for quick pickup from Wiley Park or specify your table number for direct table service with live status tracking.",
+  },
+  {
+    question: "Does Parivar offer vegetarian dishes?",
+    answer:
+      "Yes, Parivar offers a curated selection of vegetarian dishes including Daal Tadka, Mixed Vegetable Curry, Paneer Tikka Masala, vegetable samosas, and freshly baked tandoori naan breads.",
+  },
+  {
+    question: "Can spice levels be adjusted for curries and biryanis?",
+    answer:
+      "Most curries can be adjusted for mild, medium, or spicy heat upon request. Please mention your spice preferences to our team or note them during online ordering.",
   },
 ];
 
@@ -63,9 +73,14 @@ export function FAQ() {
         <div className="space-y-4">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
+            const faqSlug = item.question
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/(^-|-$)/g, "");
             return (
               <div
                 key={index}
+                id={`faq-${faqSlug}`}
                 className="glass rounded-2xl border border-gold/15 overflow-hidden transition-all duration-300 hover:border-gold/30"
               >
                 <button

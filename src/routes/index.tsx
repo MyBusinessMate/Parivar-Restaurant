@@ -15,31 +15,31 @@ import { FAQ, faqData } from "@/components/FAQ";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Parivar Restaurant - Timeless Indian Flavours in Sydney" },
+      { title: "Parivar Restaurant Wiley Park Sydney — Halal Hyderabadi & Indian Dining Open Until 3AM" },
       {
         name: "description",
         content:
-          "Parivar Restaurant brings authentic Hyderabadi fine dining to Sydney - biryani, kebabs, and royal Nizami heritage served as family.",
+          "Parivar Restaurant in Wiley Park, Sydney serves authentic Halal Hyderabadi biryani, Mughlai curries, and tandoori grills daily from 3:00 PM to 3:00 AM. Dine-in, takeaway, and Sydney-wide catering.",
       },
-      { property: "og:title", content: "Parivar Restaurant - Timeless Indian Flavours in Sydney" },
+      { property: "og:title", content: "Parivar Restaurant Wiley Park Sydney — Halal Hyderabadi & Indian Dining Open Until 3AM" },
       {
         property: "og:description",
-        content: "Authentic Hyderabadi luxury dining in Sydney. Dine in, take away, or book catering.",
+        content: "Authentic Halal Hyderabadi biryani, slow-cooked haleem, tandoori kebabs, and curries in Wiley Park, Sydney. Open daily 3:00 PM to 3:00 AM. Dine-in, takeaway, and catering.",
       },
-      { property: "og:url", content: "https://parivar-restaurant.com" },
-      { property: "og:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { property: "og:url", content: "https://parivar.restaurant" },
+      { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Parivar Restaurant - Timeless Indian Flavours in Sydney" },
+      { name: "twitter:title", content: "Parivar Restaurant Wiley Park Sydney — Halal Hyderabadi & Indian Dining Open Until 3AM" },
       {
         name: "twitter:description",
-        content: "Authentic Hyderabadi luxury dining in Sydney. Dine in, take away, or book catering.",
+        content: "Authentic Halal Hyderabadi biryani, slow-cooked haleem, tandoori kebabs, and curries in Wiley Park, Sydney. Open daily 3:00 PM to 3:00 AM. Dine-in, takeaway, and catering.",
       },
-      { name: "twitter:image", content: "https://parivar-restaurant.com/parivar-logo.png" },
+      { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
     links: [
       {
         rel: "canonical",
-        href: "https://parivar-restaurant.com",
+        href: "https://parivar.restaurant",
       },
     ],
     scripts: [
@@ -49,9 +49,9 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Restaurant",
           "name": "Parivar Restaurant",
-          "image": "https://parivar-restaurant.com/parivar-logo.png",
-          "@id": "https://parivar-restaurant.com/#restaurant",
-          "url": "https://parivar-restaurant.com",
+          "image": "https://parivar.restaurant/parivar-logo.png",
+          "@id": "https://parivar.restaurant/#restaurant",
+          "url": "https://parivar.restaurant",
           "telephone": "+61 405 635 423",
           "address": {
             "@type": "PostalAddress",
@@ -71,20 +71,38 @@ export const Route = createFileRoute("/")({
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
               "opens": "15:00",
+              "closes": "23:59"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "00:00",
               "closes": "03:00"
             }
           ],
           "servesCuisine": ["Indian", "Hyderabadi", "Halal"],
           "priceRange": "$$",
-          "hasMenu": "https://parivar-restaurant.com/menu",
+          "hasMenu": "https://parivar.restaurant/menu",
           "acceptsReservations": true,
           "currenciesAccepted": "AUD",
           "paymentAccepted": "Cash, Credit Card, EFTPOS",
           "sameAs": [
             "https://www.instagram.com/parivar.restaurantnsw/",
-            "https://www.facebook.com/people/Parivar-Restaurant/61565578144081/",
-            "https://www.wikidata.org/wiki/Q1140924",
-            "https://www.wikidata.org/wiki/Q2724036"
+            "https://www.facebook.com/people/Parivar-Restaurant/61565578144081/"
+          ],
+          "knowsAbout": [
+            { "@type": "Thing", "name": "Hyderabadi Biryani", "sameAs": "https://www.wikidata.org/wiki/Q1140924" },
+            { "@type": "Thing", "name": "Mughlai Cuisine", "sameAs": "https://www.wikidata.org/wiki/Q17489635" },
+            { "@type": "Thing", "name": "Halal Food", "sameAs": "https://www.wikidata.org/wiki/Q184206" },
+            { "@type": "Thing", "name": "Hyderabadi Haleem", "sameAs": "https://www.wikidata.org/wiki/Q1626148" }
+          ],
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Halal Certified", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Late Night Dining", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Family Friendly", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Takeaway Available", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Catering Available", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Dine In Available", "value": true }
           ],
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -119,6 +137,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          "@id": "https://parivar.restaurant/#faq",
           "mainEntity": faqData.map((item) => ({
             "@type": "Question",
             "name": item.question,
@@ -134,15 +153,15 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "@id": "https://parivar-restaurant.com/#website",
+          "@id": "https://parivar.restaurant/#website",
           "name": "Parivar Restaurant",
-          "url": "https://parivar-restaurant.com",
+          "url": "https://parivar.restaurant",
           "publisher": {
-            "@id": "https://parivar-restaurant.com/#restaurant"
+            "@id": "https://parivar.restaurant/#restaurant"
           },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://parivar-restaurant.com/menu?category={search_term_string}",
+            "target": "https://parivar.restaurant/menu?category={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         })
