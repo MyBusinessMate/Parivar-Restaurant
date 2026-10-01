@@ -58,6 +58,23 @@ export function Testimonials() {
             </motion.figure>
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-6 glass px-8 py-6 rounded-2xl border border-gold/20 max-w-2xl mx-auto shadow-sm">
+            <div className="text-center sm:text-left">
+              <h3 className="font-display text-xl text-foreground mb-1">Loved Your Meal at Parivar?</h3>
+              <p className="text-sm text-muted-foreground">Share your dining experience with our family on Google.</p>
+            </div>
+            <a
+              href="https://search.google.com/local/writereview?placeid=ChIJ8_c_wV-vEmsR5yZ9h8q7k9M"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#E0B03D] text-primary-foreground font-semibold px-6 py-3 rounded-full text-sm transition-all duration-300 shadow-sm hover:shadow-gold-glow whitespace-nowrap"
+            >
+              ★ Leave a Google Review
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

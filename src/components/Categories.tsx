@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import { Tag, Utensils, ArrowRight } from "lucide-react";
 
 const categories = [
+  { name: "Biryani & Mains", img: "https://res.cloudinary.com/akmdvmmw/image/upload/v1787056264/2_jlzkle.jpg", desc: "Authentic Dum Biryanis" },
   { name: "Entrée", img: "/menu-images/Entree/chicken tikka.png", desc: "Tandoori & starters" },
   { name: "Naan Bread", img: "/menu-images/Naan Bread/butter naan.png", desc: "Fresh baked breads" },
   { name: "Savory Items", img: "/menu-images/Savory Items/samosa 2 pcs.png", desc: "Momos & samosas" },
@@ -64,6 +66,49 @@ export function Categories() {
               </motion.div>
             </Link>
           ))}
+        </div>
+
+        {/* Special Offerings Spotlight */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+          <Link
+            to="/deals"
+            className="glass rounded-2xl p-6 sm:p-8 border border-gold/30 hover:border-gold hover:shadow-gold-glow transition-all duration-300 flex flex-col justify-between group"
+          >
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gold font-semibold mb-3">
+                <Tag className="w-4 h-4" /> Best Value Bundles
+              </div>
+              <h3 className="font-display text-2xl sm:text-3xl text-foreground font-bold mb-2 group-hover:text-gold transition-colors">
+                Exclusive Deals &amp; Combos
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Save on royal biryani feast boxes, tandoori platters, and student dinner combos. Freshly packed and open until 3:00 AM.
+              </p>
+            </div>
+            <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">
+              Explore Meal Deals <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </div>
+          </Link>
+
+          <Link
+            to="/tiffin"
+            className="glass rounded-2xl p-6 sm:p-8 border border-gold/30 hover:border-gold hover:shadow-gold-glow transition-all duration-300 flex flex-col justify-between group"
+          >
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#0B5D3B] font-semibold mb-3">
+                <Utensils className="w-4 h-4" /> Daily Home-Style Service
+              </div>
+              <h3 className="font-display text-2xl sm:text-3xl text-foreground font-bold mb-2 group-hover:text-gold transition-colors">
+                Hyderabadi Tiffin Subscription
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Wholesome, low-oil everyday meals with rotis, curries, lentils, and basmati rice delivered hot across Canterbury-Bankstown &amp; Sydney.
+              </p>
+            </div>
+            <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">
+              View Tiffin Plans <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </div>
+          </Link>
         </div>
       </div>
     </section>

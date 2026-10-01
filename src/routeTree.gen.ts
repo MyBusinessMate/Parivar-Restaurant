@@ -9,9 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TiffinRouteImport } from './routes/tiffin'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MenuRouteImport } from './routes/menu'
+import { Route as DealsRouteImport } from './routes/deals'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as CateringRouteImport } from './routes/catering'
 import { Route as AdminRouteImport } from './routes/admin'
@@ -30,6 +33,11 @@ import { Route as AdminCategoriesRouteImport } from './routes/admin/categories'
 import { Route as AdminBillingRouteImport } from './routes/admin/billing'
 import { Route as AdminAddonsRouteImport } from './routes/admin/addons'
 
+const TiffinRoute = TiffinRouteImport.update({
+  id: '/tiffin',
+  path: '/tiffin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -43,6 +51,16 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
 const MenuRoute = MenuRouteImport.update({
   id: '/menu',
   path: '/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DealsRoute = DealsRouteImport.update({
+  id: '/deals',
+  path: '/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutRoute = CheckoutRouteImport.update({
@@ -136,9 +154,12 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AdminRouteWithChildren
   '/catering': typeof CateringRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/deals': typeof DealsRoute
   '/menu': typeof MenuRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms': typeof TermsRoute
+  '/tiffin': typeof TiffinRoute
   '/admin/addons': typeof AdminAddonsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/categories': typeof AdminCategoriesRoute
@@ -157,9 +178,12 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/catering': typeof CateringRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/deals': typeof DealsRoute
   '/menu': typeof MenuRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms': typeof TermsRoute
+  '/tiffin': typeof TiffinRoute
   '/admin/addons': typeof AdminAddonsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/categories': typeof AdminCategoriesRoute
@@ -180,9 +204,12 @@ export interface FileRoutesById {
   '/admin': typeof AdminRouteWithChildren
   '/catering': typeof CateringRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/deals': typeof DealsRoute
   '/menu': typeof MenuRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms': typeof TermsRoute
+  '/tiffin': typeof TiffinRoute
   '/admin/addons': typeof AdminAddonsRoute
   '/admin/billing': typeof AdminBillingRoute
   '/admin/categories': typeof AdminCategoriesRoute
@@ -204,9 +231,12 @@ export interface FileRouteTypes {
     | '/admin'
     | '/catering'
     | '/checkout'
+    | '/contact'
+    | '/deals'
     | '/menu'
     | '/privacy-policy'
     | '/terms'
+    | '/tiffin'
     | '/admin/addons'
     | '/admin/billing'
     | '/admin/categories'
@@ -225,9 +255,12 @@ export interface FileRouteTypes {
     | '/'
     | '/catering'
     | '/checkout'
+    | '/contact'
+    | '/deals'
     | '/menu'
     | '/privacy-policy'
     | '/terms'
+    | '/tiffin'
     | '/admin/addons'
     | '/admin/billing'
     | '/admin/categories'
@@ -247,9 +280,12 @@ export interface FileRouteTypes {
     | '/admin'
     | '/catering'
     | '/checkout'
+    | '/contact'
+    | '/deals'
     | '/menu'
     | '/privacy-policy'
     | '/terms'
+    | '/tiffin'
     | '/admin/addons'
     | '/admin/billing'
     | '/admin/categories'
@@ -270,14 +306,24 @@ export interface RootRouteChildren {
   AdminRoute: typeof AdminRouteWithChildren
   CateringRoute: typeof CateringRoute
   CheckoutRoute: typeof CheckoutRoute
+  ContactRoute: typeof ContactRoute
+  DealsRoute: typeof DealsRoute
   MenuRoute: typeof MenuRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   TermsRoute: typeof TermsRoute
+  TiffinRoute: typeof TiffinRoute
   OrderTrackingOrderIdRoute: typeof OrderTrackingOrderIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tiffin': {
+      id: '/tiffin'
+      path: '/tiffin'
+      fullPath: '/tiffin'
+      preLoaderRoute: typeof TiffinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -297,6 +343,20 @@ declare module '@tanstack/react-router' {
       path: '/menu'
       fullPath: '/menu'
       preLoaderRoute: typeof MenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deals': {
+      id: '/deals'
+      path: '/deals'
+      fullPath: '/deals'
+      preLoaderRoute: typeof DealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout': {
@@ -458,9 +518,12 @@ const rootRouteChildren: RootRouteChildren = {
   AdminRoute: AdminRouteWithChildren,
   CateringRoute: CateringRoute,
   CheckoutRoute: CheckoutRoute,
+  ContactRoute: ContactRoute,
+  DealsRoute: DealsRoute,
   MenuRoute: MenuRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   TermsRoute: TermsRoute,
+  TiffinRoute: TiffinRoute,
   OrderTrackingOrderIdRoute: OrderTrackingOrderIdRoute,
 }
 export const routeTree = rootRouteImport

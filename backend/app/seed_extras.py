@@ -26,6 +26,13 @@ SPECIAL_ITEMS = [
 # when a category has no backend items, but those mock items don't exist as
 # real MenuItem rows and fail with a 400 on checkout.
 MAIN_MENU = {
+    "Biryani & Mains": [
+        {"name": "Hyderabadi Chicken Dum Biryani", "desc": "Fragrant saffron basmati rice and marinated chicken slow-cooked in sealed dum handi with royal spices, served with salan and raita", "price": 16.99, "img": "https://res.cloudinary.com/akmdvmmw/image/upload/v1787056264/2_jlzkle.jpg"},
+        {"name": "Hyderabadi Mutton Dum Biryani", "desc": "Tender Australian halal goat slow-simmered in aromatic spices layered with aged saffron basmati rice, served with salan and raita", "price": 18.99, "img": "https://res.cloudinary.com/akmdvmmw/image/upload/v1787056264/2_jlzkle.jpg"},
+        {"name": "Chicken 65 Biryani", "desc": "Spicy deep-fried chicken 65 bites tossed with curry leaves, layered over fragrant spiced dum biryani rice", "price": 17.99, "img": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop"},
+        {"name": "Vegetarian Dum Biryani", "desc": "Seasonal garden vegetables, paneer, and aged basmati rice cooked on slow dum with saffron, herbs, and fried onions", "price": 14.99, "img": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop"},
+        {"name": "Bagara Rice / Saffron Basmati Rice", "desc": "Traditional Hyderabadi tempered basmati rice infused with whole spices, bay leaves, cardamom, and pure ghee", "price": 6.99, "img": "https://res.cloudinary.com/akmdvmmw/image/upload/v1787059285/32_glqnri.jpg"},
+    ],
     "Entrée": [
         {"name": "Tandoori (Half)", "desc": "Half tandoori chicken, marinated and charred", "price": 11.99, "img": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=800&auto=format&fit=crop"},
         {"name": "Tandoori (Full)", "desc": "Full tandoori chicken, smoky and juicy", "price": 17.99, "img": "https://imgs.search.brave.com/jNKHIdPcMvtIdQAyweUwMBkc5AKdR2uoXL_kdOQ3z98/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vdGFuZG9vcmkt/Y2hpY2tlbi1wcmVw/YXJlZC1ieS1yb2Fz/dGluZy1jaGlja2Vu/LW1hcmluYXRlZC15/b2dodXJ0LXNwaWNl/cy10YW5kb29yLXNl/cnZlZC13b29kZW4t/cnVzdGljLWJhY2tn/cm91bmQtc2VsZWN0/aXZlLWZvY3VzXzcy/NjM2My00OTguanBn/P3NlbXQ9YWlzX2h5/YnJpZCZ3PTc0MCZx/PTgw"},

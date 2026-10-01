@@ -9,7 +9,7 @@ export const Route = createFileRoute("/terms")({
       {
         name: "description",
         content:
-          "Terms and Conditions of Service for Parivar Restaurant. Information regarding pricing, orders, takeaway, dining, and catering policies in Wiley Park, Sydney.",
+          "Terms of Service for Parivar Restaurant in Wiley Park, Sydney. Information regarding pricing, ordering, takeaway dining, and halal catering policies.",
       },
       { property: "og:title", content: "Terms of Service - Parivar Restaurant" },
       {

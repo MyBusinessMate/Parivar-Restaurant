@@ -24,7 +24,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Visit Us</h4>
+            <h3 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Visit Us</h3>
             <p className="text-sm text-muted-foreground flex items-start gap-3 mb-3">
               <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
               <span>1/83 King Georges Rd, Wiley Park<br />NSW 2195, Sydney, Australia</span>
@@ -36,20 +36,33 @@ export function Footer() {
             <p className="text-xs text-muted-foreground/80 mt-3 leading-relaxed">
               Located in Wiley Park, Canterbury-Bankstown, serving authentic Halal Indian dining across South West Sydney.
             </p>
+            <div className="mt-4">
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJ8_c_wV-vEmsR5yZ9h8q7k9M"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs text-gold hover:text-gold-light transition-colors font-medium border border-gold/30 rounded-full px-3 py-1.5 hover:bg-gold/10"
+              >
+                ★ Review Us on Google
+              </a>
+            </div>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Hours</h4>
+            <h3 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Hours</h3>
             <p className="text-sm text-muted-foreground flex items-start gap-3">
               <Clock className="w-4 h-4 text-gold mt-0.5" />
               <span>
                 Mon — Sun · 3:00 PM — 3:00 AM
               </span>
             </p>
+            <p className="text-xs text-muted-foreground/80 mt-3 leading-relaxed">
+              Open 7 days a week until 3:00 AM for late-night dine-in, takeaway, and delivery.
+            </p>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Follow</h4>
+            <h3 className="text-xs uppercase tracking-[0.3em] text-gold mb-5">Follow &amp; Explore</h3>
             <div className="flex gap-3 mb-6">
               <a
                 href="https://www.instagram.com/parivar.restaurantnsw/"
@@ -75,13 +88,19 @@ export function Footer() {
                 <a href="/#home" className="hover:text-gold transition-colors">Home</a>
               </li>
               <li>
-                <a href="/menu" className="hover:text-gold transition-colors">Menu</a>
+                <a href="/menu" className="hover:text-gold transition-colors">Menu &amp; Biryani</a>
               </li>
               <li>
-                <a href="/catering" className="hover:text-gold transition-colors">Catering</a>
+                <a href="/deals" className="hover:text-gold transition-colors">Combos &amp; Deals</a>
               </li>
               <li>
-                <a href="/#about" className="hover:text-gold transition-colors">About</a>
+                <a href="/tiffin" className="hover:text-gold transition-colors">Tiffin Service</a>
+              </li>
+              <li>
+                <a href="/catering" className="hover:text-gold transition-colors">Event Catering</a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-gold transition-colors">Contact &amp; Location</a>
               </li>
               <li>
                 <a href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</a>

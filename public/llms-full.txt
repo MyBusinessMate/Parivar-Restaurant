@@ -3,16 +3,17 @@
 ## Entity Overview
 - Name: Parivar Restaurant
 - Cuisine Type: Authentic Hyderabadi, Indian, Mughlai
-- Dietary Standard: 100% Halal certified
-- Operating Format: Dine-in, Takeaway, Online Ordering, Bespoke Event Catering
+- Dietary Standard: 100% Halal certified (Australian Halal meats)
+- Operating Format: Dine-in, Takeaway, Online Ordering, Daily Tiffin Service, Bespoke Event Catering
 - Address: 1/83 King Georges Rd, Wiley Park NSW 2195, Sydney, Australia
 - Region: Canterbury-Bankstown, South West Sydney
 - Telephone: +61 405 635 423
 - Canonical Website: https://parivar.restaurant
-- Coordinates: Latitude -33.9189, Longitude 151.0667
+- Coordinates: Latitude -33.9238, Longitude 151.0664
+- Nearest Transit: Wiley Park Railway Station (300m / 4-minute walk, T3 Bankstown line)
 
 ## Direct Entity Summary
-Parivar Restaurant in Wiley Park, Sydney serves authentic Halal-certified Hyderabadi biryani, Mughlai curries, tandoori grills, and traditional desserts daily from 3:00 PM to 3:00 AM.
+Parivar Restaurant in Wiley Park, Sydney serves authentic Halal-certified Hyderabadi biryani, Mughlai curries, charcoal tandoori grills, homestyle tiffin subscriptions, and traditional desserts daily from 3:00 PM to 3:00 AM.
 
 ## Verified Operating Schedule
 - Monday: 3:00 PM to 3:00 AM (Late night)
@@ -24,22 +25,36 @@ Parivar Restaurant in Wiley Park, Sydney serves authentic Halal-certified Hydera
 - Sunday: 3:00 PM to 3:00 AM (Late night)
 
 ## Core Food & Menu Categories
-- Entrée & Tandoor: Tandoori Chicken, Chicken Tikka, Sheekh Kebab, Fish Fry (Basa), Chicken 65, Mutton Haleem
+- Hyderabadi Biryani & Mains: Chicken Dum Biryani, Mutton Dum Biryani, Chicken 65 Biryani, Veg Dum Biryani, Saffron Bagara Basmati Rice
+- Entrée & Tandoor: Tandoori Chicken (Half / Full), Chicken Tikka, Sheekh Kebab, Fish Fry (Basa), Chicken 65, Slow-Simmered Mutton Haleem
 - Naan Breads: Plain Naan, Butter Naan, Garlic Naan
-- Savory Starters: Samosas, Steamed Momos, Vegetable Rolls
+- Savory Starters: Handcrafted Samosas, Steamed Momos with Chili-Garlic Chutney, Flaky Vegetable Rolls
 - Chicken Curries: Butter Chicken, Achari Chicken, Chicken Khorma, Parivar Special Chicken Gravy, Chicken Vindaloo, Chicken Masala
-- Mutton Curries: Mutton Vindaloo, Mutton Khorma, Mutton Masala
-- Vegetarian Curries: Daal Tadka, Mixed Vegetable Curry, Paneer Tikka Masala
-- Desi Chinese: Chicken & Veg Fried Rice, Chicken & Veg Fry Noodles, Manchurian
-- Desserts: Gulab Jamun, Qubani, Rasmalai, Shahi Tukda, Zafrani Kheer, Khowa Puri
-- Beverages: Authentic Spiced Chai, Sweet Mango Lassi
+- Mutton Curries: Mutton Vindaloo, Mutton Khorma, Mutton Masala (Tender Australian Halal Goat)
+- Vegetarian Curries: Yellow Daal Tadka, Mixed Vegetable Curry, Paneer Tikka Masala
+- Desi Chinese: Chicken Fry Noodles, Veg Fry Noodles, Chicken & Veg Manchurian, Wok Fried Rice
+- Desserts: Qubani Ka Meetha, Shahi Tukda, Gulab Jamun, Rasmalai, Zafrani Kheer, Khowa Puri
+- Beverages: Authentic Spiced Hyderabadi Irani Chai, Sweet Mango Lassi, Soft Drinks
+
+## Value Deals & Combos
+- Biryani Feast for Two ($38.99): 2x Biryanis, Chicken 65, Drinks, Salan & Raita
+- Family Royal Platter ($74.99): 2x Biryanis, Curry, Tandoori Chicken, Naans & Drinks
+- Student Late-Night Combo ($19.99): Chicken Dum Biryani, Samosas, Chai or Drink
+- Curry & Naan Duo ($22.99): Choice of Curry, Bagara Rice & Garlic Naan
+- Available at: https://parivar.restaurant/deals
+
+## Daily & Weekly Tiffin Service
+- Homestyle 5-day ($75/wk) and 7-day student ($110/wk) meal boxes delivered warm across Sydney
+- Details & Enrollment: https://parivar.restaurant/tiffin
 
 ## Catering Services
 - Coverage: Weddings, corporate functions, private gatherings, and community events across Greater Sydney
 - Service Capabilities: Live clay-tandoor setups, sealed royal dum biryani handis, multi-course banquet buffets
-- Inquiries: Via website (https://parivar.restaurant/catering) or telephone (+61 405 635 423)
+- Inquiries: https://parivar.restaurant/catering | Phone: +61 405 635 423
 
 ## Official Controlled Profiles
+- Google Business Profile: Parivar Restaurant Wiley Park
+- Google Review Link: https://search.google.com/local/writereview?placeid=ChIJk54W-yO7EmsR2MvH2e_q2B8
 - Instagram: https://www.instagram.com/parivar.restaurantnsw/
 - Facebook: https://www.facebook.com/people/Parivar-Restaurant/61565578144081/
 

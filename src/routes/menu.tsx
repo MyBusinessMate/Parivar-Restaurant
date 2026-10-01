@@ -12,6 +12,38 @@ const fallbackMenuData: Record<
   string,
   { name: string; desc: string; price: number; image_url: string }[]
 > = {
+  "Biryani & Mains": [
+    {
+      name: "Hyderabadi Chicken Dum Biryani",
+      desc: "Fragrant saffron basmati rice and marinated chicken slow-cooked in sealed dum handi with royal spices, served with salan and raita",
+      price: 16.99,
+      image_url: "https://res.cloudinary.com/akmdvmmw/image/upload/v1787056264/2_jlzkle.jpg",
+    },
+    {
+      name: "Hyderabadi Mutton Dum Biryani",
+      desc: "Tender Australian halal goat slow-simmered in aromatic spices layered with aged saffron basmati rice, served with salan and raita",
+      price: 18.99,
+      image_url: "https://res.cloudinary.com/akmdvmmw/image/upload/v1787056264/2_jlzkle.jpg",
+    },
+    {
+      name: "Chicken 65 Biryani",
+      desc: "Spicy deep-fried chicken 65 bites tossed with curry leaves, layered over fragrant spiced dum biryani rice",
+      price: 17.99,
+      image_url: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Vegetarian Dum Biryani",
+      desc: "Seasonal garden vegetables, paneer, and aged basmati rice cooked on slow dum with saffron, herbs, and fried onions",
+      price: 14.99,
+      image_url: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Bagara Rice / Saffron Basmati Rice",
+      desc: "Traditional Hyderabadi tempered basmati rice infused with whole spices, bay leaves, cardamom, and pure ghee",
+      price: 6.99,
+      image_url: "https://res.cloudinary.com/akmdvmmw/image/upload/v1787059285/32_glqnri.jpg",
+    },
+  ],
   Entrée: [
     {
       name: "Tandoori (Half)",
@@ -293,6 +325,227 @@ const fallbackMenuData: Record<
 
 const categories = Object.keys(fallbackMenuData);
 
+const categoryEditorialData: Record<
+  string,
+  {
+    tagline: string;
+    editorialText: string;
+    dietaryHighlights: string[];
+    pairingSuggestions: string;
+    faqs: { question: string; answer: string }[];
+  }
+> = {
+  "Biryani & Mains": {
+    tagline: "Authentic Hyderabadi Dum Biryani slow-cooked with royal Nizami spices",
+    editorialText:
+      "Prepared following centuries-old Nizami royal traditions, our signature Hyderabadi Dum Biryani layers fragrant aged long-grain basmati rice with marinated Australian Halal meat. Sealed in heavy cooking handis with dough ('Dum Pukht') and simmered gently over slow embers, every grain absorbs whole saffron, mint, browned onions, and rich meat juices. Served piping hot with our tangy Mirchi Ka Salan and fresh mint-cucumber raita.",
+    dietaryHighlights: ["100% Halal Certified", "Aged Basmati Rice", "Traditional Dum Pukht", "Gluten-Friendly Options"],
+    pairingSuggestions:
+      "Elevate your meal by pairing our Dum Biryani with Chicken 65, warm Garlic Naan, and cool Mango Lassi or royal Zafrani Kheer.",
+    faqs: [
+      {
+        question: "Is the Biryani at Parivar Restaurant 100% Halal certified?",
+        answer:
+          "Yes, all meats used in our Hyderabadi Dum Biryanis are strictly 100% Halal certified sourced from accredited Australian suppliers.",
+      },
+      {
+        question: "How is authentic Hyderabadi Dum Biryani cooked?",
+        answer:
+          "We use the traditional 'Dum Pukht' technique where marinated meat, parboiled aged basmati rice, saffron, and fresh mint are sealed in a heavy handi and slow-cooked over low embers so the meat juices infuse every grain.",
+      },
+      {
+        question: "What condiments are served with the Biryani?",
+        answer:
+          "Every Biryani is served with house-made Mirchi Ka Salan (tangy peanut and sesame gravy) and cooling cucumber-mint raita.",
+      },
+    ],
+  },
+  Entrée: {
+    tagline: "Charcoal-tandoor roasted skewers, crispy bites, and slow-simmered Haleem",
+    editorialText:
+      "Start your dining experience with our authentic Hyderabadi and North Indian appetisers. From succulent chicken tikka and spiced sheekh kebabs roasted fresh over charcoal embers in our high-heat clay tandoor, to our famous crispy Chicken 65 tossed with fresh curry leaves and green chilies. We also serve authentic slow-cooked Hyderabadi Mutton Haleem, pounded with broken wheat, lentils, and pure ghee.",
+    dietaryHighlights: ["100% Halal Meats", "Clay Tandoor Roasted", "House Spice Marinades", "Freshly Cooked to Order"],
+    pairingSuggestions:
+      "Pair our smoky Tandoori Chicken or crispy Basa Fish Fry with fresh Mint Chutney, Butter Naan, and a hot cup of Irani Chai.",
+    faqs: [
+      {
+        question: "Are tandoori starters cooked in a traditional clay oven?",
+        answer:
+          "Yes, all our tandoori chicken, kebabs, and tikka skewers are roasted over natural lump charcoal in our high-heat clay tandoor oven for an authentic smoky char.",
+      },
+      {
+        question: "What is Chicken 65?",
+        answer:
+          "Chicken 65 is a spicy, deep-fried Indo-Chinese starter originating in South India, coated with chili, ginger, garlic, and curry leaves with a crisp exterior.",
+      },
+      {
+        question: "Is the Mutton Haleem available every day?",
+        answer:
+          "Yes, our rich Hyderabadi Mutton Haleem is slow-simmered for 8+ hours with shredded goat meat, broken wheat, lentils, and pure ghee.",
+      },
+    ],
+  },
+  "Naan Bread": {
+    tagline: "Freshly baked artisan Indian flatbreads from our clay tandoor oven",
+    editorialText:
+      "Nothing complements rich curries like authentic tandoor bread. Hand-stretched to order, our flatbreads are slapped against the searing clay walls of our tandoor oven, emerging blistered, soft, and lightly crisp. Choose from classic Plain Naan, rich Butter Naan brushed with pure melted butter, or aromatic Garlic Naan sprinkled with freshly minced garlic and coriander herbs.",
+    dietaryHighlights: ["Baked Fresh to Order", "Clay Tandoor Cooked", "Vegetarian Friendly", "Vegan Roti Available"],
+    pairingSuggestions:
+      "Essential companion to our Butter Chicken, Mutton Korma, Daal Tadka, or Paneer Tikka Masala.",
+    faqs: [
+      {
+        question: "How are your naans prepared?",
+        answer:
+          "Each naan is freshly rolled by hand upon order and slapped onto the internal clay walls of our piping-hot tandoor oven, emerging blistered, soft, and warm.",
+      },
+      {
+        question: "Do you offer dairy-free bread options?",
+        answer:
+          "Plain Roti is dairy-free and vegan-friendly, whereas Butter Naan and Garlic Naan are brushed with rich butter.",
+      },
+    ],
+  },
+  "Savory Items": {
+    tagline: "Handcrafted street snacks, flaky pastries, and steamed momo dumplings",
+    editorialText:
+      "Craving classic Subcontinental street snacks in Sydney? Our savory snacks selection features golden pyramid samosas packed with cumin-spiced potatoes, flaky spiced vegetable rolls, and delicate steamed dumplings (momos) served with house fiery chili-garlic chutney. Ideal for quick bites, afternoon snacks with chai, or sharing at family dinners.",
+    dietaryHighlights: ["Handcrafted Daily", "Vegetarian Favorites", "Traditional Street Flavors", "Custom Chutneys"],
+    pairingSuggestions:
+      "Enjoy piping-hot samosas or vegetable rolls alongside our signature Hyderabadi spiced Irani Chai.",
+    faqs: [
+      {
+        question: "Are the samosas made fresh in-house?",
+        answer:
+          "Yes, our golden samosas feature crisp hand-folded pastry stuffed with cumin-spiced potatoes and green peas, served with sweet tamarind and spicy mint chutneys.",
+      },
+      {
+        question: "Are the momos steamed fresh?",
+        answer:
+          "Our dumplings are steamed to order and accompanied by house-crafted fiery chili-garlic dipping sauce.",
+      },
+    ],
+  },
+  "Chicken Curries": {
+    tagline: "Rich, slow-simmered chicken gravies infused with regional spices",
+    editorialText:
+      "Our chicken curry repertoire spans from the silky, velvety sweetness of classic Butter Chicken cooked in creamy tomato gravy to the fiery, vinegar-tinged punch of Goan Chicken Vindaloo. Each dish features tender boneless Australian Halal chicken simmered in freshly ground garam masala, ginger, garlic, and slow-caramelized onion bases crafted by experienced chefs.",
+    dietaryHighlights: ["100% Halal Chicken", "No Artificial Colors", "Customizable Heat Level", "Slow-Cooked Gravies"],
+    pairingSuggestions:
+      "Best enjoyed scooped with warm Garlic Naan or ladled over fragrant Saffron Bagara Basmati Rice.",
+    faqs: [
+      {
+        question: "What is the spice level of your Butter Chicken?",
+        answer:
+          "Our Butter Chicken is mildly spiced with a rich, velvety tomato and cream reduction sweetened slightly with honey and fenugreek leaves (kasoori methi).",
+      },
+      {
+        question: "Can curries be customized to my spice preference?",
+        answer:
+          "Yes, when ordering dine-in or takeaway our chefs can tailor the chili heat from mild to extra hot upon request.",
+      },
+    ],
+  },
+  "Mutton Curries": {
+    tagline: "Tender Australian halal goat and lamb in deep, spiced Nizami gravies",
+    editorialText:
+      "Renowned for deep flavor and melt-in-the-mouth tenderness, our mutton curries are slow-braised for hours with premium cuts of Australian halal goat. Experience the rich cashew and yogurt richness of Mutton Korma, the robust spiced heat of Mutton Masala, or the tangy chili notes of traditional Mutton Vindaloo. Every gravy delivers an authentic taste of Hyderabad and North India.",
+    dietaryHighlights: ["Premium Halal Goat Meat", "Slow-Braised Tender Cuts", "Traditional Mughlai Gravy", "Rich Bone Broth Base"],
+    pairingSuggestions:
+      "Pairs extraordinarily well with Butter Naan, Bagara Rice, and a refreshing side of cucumber raita.",
+    faqs: [
+      {
+        question: "What cut of meat is used in Mutton Curries?",
+        answer:
+          "We use bone-in and tender boneless cuts of premium Australian halal goat and lamb, braised slowly until fork-tender.",
+      },
+      {
+        question: "What is the difference between Mutton Korma and Mutton Vindaloo?",
+        answer:
+          "Mutton Korma is cooked in a delicate cashew, yogurt, and cardamom gravy, while Mutton Vindaloo is an intense, tangy, and fiery Goan curry flavored with red chilies and vinegar.",
+      },
+    ],
+  },
+  "Vegetarian Curries": {
+    tagline: "Wholesome lentil dals, spiced seasonal vegetables, and rich paneer curries",
+    editorialText:
+      "Vegetarian dining at Parivar is celebrated with the same royal passion as our meats. Our comforting Daal Tadka is tempered with crackling cumin, garlic, and whole dried chilies, while our Paneer Tikka Masala features succulent cottage cheese cubes simmered in spiced tomato-onion gravy. Fresh seasonal vegetable curries round out a vibrant, hearty, and satisfying plant-based spread.",
+    dietaryHighlights: ["100% Pure Vegetarian", "Vegan Options Available", "Fresh Paneer Cheese", "High-Protein Lentils"],
+    pairingSuggestions:
+      "Pair Daal Tadka with Bagara Rice, or Paneer Tikka Masala with piping hot tandoori Garlic Naan.",
+    faqs: [
+      {
+        question: "Are the vegetarian curries suitable for vegans?",
+        answer:
+          "Our Daal Tadka and Chana Masala can be prepared 100% vegan without ghee or butter upon request. Our Paneer dishes contain fresh dairy cheese.",
+      },
+      {
+        question: "Where is the paneer sourced?",
+        answer:
+          "We source fresh, soft artisanal paneer cubes that absorb our rich spiced gravy without becoming chewy.",
+      },
+    ],
+  },
+  "Desi Chinese": {
+    tagline: "Wok-tossed Indo-Chinese noodles, fried rice, and savory Manchurian",
+    editorialText:
+      "The beloved Indo-Chinese culinary tradition combines Chinese wok cooking with fiery Indian aromatics. High-flame stir-fried noodles and fragrant fried rice tossed with crunchy vegetables, soy sauce, and tender chicken, alongside saucy Chicken or Veg Manchurian balls infused with garlic, ginger, and chili. A favorite comfort food choice across Sydney.",
+    dietaryHighlights: ["High-Flame Wok Cooked", "Fresh Crunchy Vegetables", "Halal Chicken Available", "Vegetarian Options"],
+    pairingSuggestions:
+      "Combine Chicken Fried Rice with saucy Chicken Manchurian, or Veg Noodles with Veg Manchurian for the ultimate Indo-Chinese feast.",
+    faqs: [
+      {
+        question: "What is Desi Chinese cuisine?",
+        answer:
+          "Desi Chinese (Indo-Chinese) is a beloved fusion adapting Chinese stir-fry and wok-tossing techniques with bold Indian spices, green chilies, ginger, and soy sauce.",
+      },
+      {
+        question: "Can I get non-spicy fried rice or noodles for kids?",
+        answer:
+          "Yes, our chefs can prepare mild, non-spicy wok noodles or fried rice suitable for children upon request.",
+      },
+    ],
+  },
+  Desserts: {
+    tagline: "Iconic Hyderabadi royal sweets, apricot compote, and saffron puddings",
+    editorialText:
+      "No Hyderabadi meal is complete without traditional royal desserts. Indulge in authentic Qubani Ka Meetha—slow-stewed Turkish apricots served with clotted cream—or royal Shahi Tukda, golden fried bread soaked in saffron-cardamom rabri and garnished with slivered pistachios. Also offering soft melt-in-your-mouth Gulab Jamun and delicate Rasmalai in sweet saffron milk.",
+    dietaryHighlights: ["Traditional Nizami Recipes", "Saffron & Nut Infusions", "Pure Ghee & Whole Milk", "Vegetarian Friendly"],
+    pairingSuggestions:
+      "End your late-night feast with warm Gulab Jamun or chilled Qubani Ka Meetha alongside hot spiced Irani Chai.",
+    faqs: [
+      {
+        question: "What is Qubani Ka Meetha?",
+        answer:
+          "Qubani Ka Meetha is an iconic Hyderabadi royal dessert made by slow-stewing dried apricots in sugar syrup and topped with fresh cream or custard and apricot kernels.",
+      },
+      {
+        question: "What is Shahi Tukda?",
+        answer:
+          "Shahi Tukda is the 'Royal Bread Pudding' of the Nizams, made with golden fried bread soaked in fragrant saffron-infused rabri and garnished with pistachios.",
+      },
+    ],
+  },
+  Drinks: {
+    tagline: "Authentic Hyderabadi Irani Chai, creamy mango lassi, and cold refreshments",
+    editorialText:
+      "Quench your thirst and soothe your palate with our beverage offerings. Sip on authentic Hyderabadi Irani Chai—brewed strong with thickened milk, green cardamom, and aromatic spices—or indulge in thick, silky Mango Lassi blended from real mango pulp and fresh yogurt. Assorted chilled soft drinks and bottled water are also available.",
+    dietaryHighlights: ["Freshly Brewed Daily", "Real Alphonso Mango Pulp", "Aromatic Spices", "Refreshing & Soothing"],
+    pairingSuggestions:
+      "Enjoy a tall Mango Lassi alongside spicy Biryani, and finish with hot Irani Chai after dessert.",
+    faqs: [
+      {
+        question: "How is the Hyderabadi Chai brewed?",
+        answer:
+          "Our Irani Chai is brewed as a strong decoction with rich whole milk, crushed cardamom, and spices, kept warm on a traditional boiler.",
+      },
+      {
+        question: "Is the Mango Lassi freshly blended?",
+        answer:
+          "Yes, we blend real Alphonso mango pulp with thick creamy yogurt and a hint of cardamom.",
+      },
+    ],
+  },
+};
 
 export const Route = createFileRoute("/menu")({
   validateSearch: (search: Record<string, unknown>): { category?: string } => {
@@ -302,7 +555,7 @@ export const Route = createFileRoute("/menu")({
   },
   loaderDeps: ({ search: { category } }) => ({ category }),
   loader: async ({ deps: { category } }) => {
-    const activeCategory = category && categories.includes(category) ? category : "Entrée";
+    const activeCategory = category && categories.includes(category) ? category : "Biryani & Mains";
     let items = fallbackMenuData[activeCategory as keyof typeof fallbackMenuData] || [];
     try {
       const apiUrl = process.env.VITE_API_URL || "https://parivar-restaurant-final.onrender.com";
@@ -326,18 +579,28 @@ export const Route = createFileRoute("/menu")({
       activeCategory,
     };
   },
-  head: ({ loaderData }: { loaderData?: { items?: any[]; activeCategory?: string } }) => {
-    const activeCat = loaderData?.activeCategory || "Entrée";
+  head: ({
+    loaderData,
+    search,
+  }: {
+    loaderData?: { items?: any[]; activeCategory?: string };
+    search?: { category?: string };
+  }) => {
+    const activeCat = loaderData?.activeCategory || "Biryani & Mains";
     const items = loaderData?.items || fallbackMenuData[activeCat as keyof typeof fallbackMenuData] || [];
-    const canonicalUrl = `https://parivar.restaurant/menu${activeCat !== "Entrée" ? `?category=${encodeURIComponent(activeCat)}` : ""}`;
+    const editorial = categoryEditorialData[activeCat] || categoryEditorialData["Biryani & Mains"];
+    const canonicalUrl = search?.category
+      ? `https://parivar.restaurant/menu?category=${encodeURIComponent(activeCat)}`
+      : "https://parivar.restaurant/menu";
+
     return {
       meta: [
-        { title: `${activeCat} Menu - Parivar Restaurant Sydney` },
+        { title: `${activeCat} Menu | Parivar Restaurant Wiley Park` },
         {
           name: "description",
-          content: `Explore our authentic ${activeCat} selection at Parivar Restaurant in Wiley Park, Sydney. 100% Halal certified, crafted with royal Nizami spices, open until 3:00 AM.`,
+          content: `Discover Halal ${activeCat} at Parivar Restaurant, Wiley Park. Authentic Hyderabadi recipes prepared fresh daily. Dine-in & takeaway open 3 PM - 3 AM.`,
         },
-        { property: "og:title", content: `${activeCat} Menu - Parivar Restaurant Sydney` },
+        { property: "og:title", content: `${activeCat} Menu | Parivar Restaurant Wiley Park` },
         {
           property: "og:description",
           content: `Explore authentic ${activeCat} at Parivar Restaurant in Sydney. Delicious biryani, curries, and tandoori served fresh until 3:00 AM.`,
@@ -357,53 +620,68 @@ export const Route = createFileRoute("/menu")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "name": `${activeCat} - Parivar Restaurant Menu`,
-            "description": `Authentic ${activeCat} available for dine-in, takeaway, and catering at Parivar Restaurant Sydney.`,
-            "numberOfItems": items.length,
-            "itemListElement": items.map((item: any, index: number) => ({
+            name: `${activeCat} - Parivar Restaurant Menu`,
+            description: `Authentic ${activeCat} available for dine-in, takeaway, and catering at Parivar Restaurant Sydney.`,
+            numberOfItems: items.length,
+            itemListElement: items.map((item: any, index: number) => ({
               "@type": "ListItem",
-              "position": index + 1,
-              "item": {
+              position: index + 1,
+              item: {
                 "@type": "MenuItem",
-                "name": item.name,
-                "description": item.description || item.desc || "",
-                "offers": {
+                name: item.name,
+                description: item.description || item.desc || "",
+                offers: {
                   "@type": "Offer",
-                  "price": item.price,
-                  "priceCurrency": "AUD",
-                  "availability": "https://schema.org/InStock"
-                }
-              }
-            }))
-          })
+                  price: item.price,
+                  priceCurrency: "AUD",
+                  availability: "https://schema.org/InStock",
+                },
+              },
+            })),
+          }),
         },
         {
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://parivar.restaurant/"
+                position: 1,
+                name: "Home",
+                item: "https://parivar.restaurant/",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Menu",
-                "item": "https://parivar.restaurant/menu"
+                position: 2,
+                name: "Menu",
+                item: "https://parivar.restaurant/menu",
               },
               {
                 "@type": "ListItem",
-                "position": 3,
-                "name": activeCat,
-                "item": canonicalUrl
-              }
-            ]
-          })
-        }
+                position: 3,
+                name: activeCat,
+                item: canonicalUrl,
+              },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: editorial.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        },
       ],
     };
   },
@@ -417,10 +695,9 @@ function MenuPage() {
   const addItem = useCartStore((state) => state.addItem);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
 
-  // Fallback if an invalid category is somehow provided in URL
-  const activeCategory = category && categories.includes(category) ? category : "Entrée";
+  const activeCategory = category && categories.includes(category) ? category : "Biryani & Mains";
+  const editorial = categoryEditorialData[activeCategory] || categoryEditorialData["Biryani & Mains"];
 
-  // Pre-populate with SSR loader data or fallback immediately so SSR is never empty
   const [items, setItems] = useState<any[]>(
     loaderData?.activeCategory === activeCategory && loaderData?.items?.length
       ? loaderData.items
@@ -463,7 +740,7 @@ function MenuPage() {
       <Navbar />
 
       <main id="menu-content" className="container mx-auto px-6 py-10 flex-1 max-w-4xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link to="/" className="hover:text-gold transition-colors">Home</Link>
             <span className="text-gold/40">/</span>
@@ -482,17 +759,53 @@ function MenuPage() {
           </Link>
         </div>
 
-        <div className="mb-12 text-center">
+        {/* Category Pill Navigation Bar */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar scroll-smooth">
+          {categories.map((cat) => (
+            <Link
+              key={cat}
+              to="/menu"
+              search={{ category: cat }}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                activeCategory === cat
+                  ? "bg-[#0B5D3B] text-white shadow-md shadow-[#0B5D3B]/20 border border-[#0B5D3B]"
+                  : "bg-background/80 hover:bg-muted text-muted-foreground hover:text-foreground border border-gold/15"
+              }`}
+            >
+              {cat}
+            </Link>
+          ))}
+        </div>
+
+        {/* Category Header */}
+        <div className="mb-10 text-center">
           <div className="gold-divider mb-4 justify-center">
             <span className="h-px w-10 bg-gold/40" /> Parivar Menu{" "}
             <span className="h-px w-10 bg-gold/40" />
           </div>
-          <h1 className="font-display text-5xl md:text-6xl text-gold">{activeCategory}</h1>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-gold">{activeCategory}</h1>
           <h2 className="text-sm uppercase tracking-widest text-muted-foreground mt-2">
-            Authentic Hyderabadi &amp; Indian Specialties
+            {editorial.tagline}
           </h2>
+
+          <div className="max-w-2xl mx-auto mt-4">
+            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              {editorial.editorialText}
+            </p>
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
+              {editorial.dietaryHighlights.map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full bg-gold/10 text-[#0B5D3B] border border-gold/20"
+                >
+                  ✓ {badge}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
+        {/* Dishes Grid */}
         <AnimatePresence mode="wait">
           {loading ? (
             <motion.div
@@ -592,6 +905,40 @@ function MenuPage() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Pairing Recommendation */}
+        <section className="mt-12 p-6 rounded-2xl bg-card border border-gold/20 shadow-sm">
+          <h2 className="font-display text-xl sm:text-2xl text-foreground font-semibold mb-2">
+            Chef's Pairing Recommendation
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+            {editorial.pairingSuggestions}
+          </p>
+        </section>
+
+        {/* Category FAQs */}
+        <section className="mt-12 mb-8">
+          <div className="text-center mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl text-foreground font-bold">
+              Frequently Asked Questions: {activeCategory}
+            </h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              Everything you need to know about our ingredients, Halal preparation, and ordering.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {editorial.faqs.map((faq, index) => (
+              <div key={index} className="glass p-5 rounded-xl border border-gold/15 shadow-sm">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  {faq.question}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <Footer />

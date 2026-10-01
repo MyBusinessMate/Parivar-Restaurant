@@ -8,26 +8,26 @@ import logo from "@/assets/parivar-logo.png";
 export const Route = createFileRoute("/catering")({
   head: () => ({
     meta: [
-      { title: "Royal Indian & Halal Catering Sydney - Parivar Restaurant" },
+      { title: "Halal Indian Catering Sydney | Parivar Restaurant" },
       {
         name: "description",
         content:
-          "Award-winning Halal Indian & Mughlai catering in Sydney. Authentic Hyderabadi Dum Biryani, live tandoor grills, and bespoke banquets for weddings, corporate events, and parties.",
+          "Halal Indian catering in Sydney for weddings, Eid gatherings, corporate events and birthdays. Hyderabadi biryani and curries from Parivar.",
       },
-      { property: "og:title", content: "Royal Indian & Halal Catering Sydney - Parivar Restaurant" },
+      { property: "og:title", content: "Halal Indian Catering Sydney | Parivar Restaurant" },
       {
         property: "og:description",
         content:
-          "Experience royal Nizami banquets crafted for your special day. Authentic slow-cooked biryani, kebabs, and dessert spreads across Greater Sydney.",
+          "Halal Indian catering in Sydney for weddings, Eid gatherings, corporate events and birthdays. Hyderabadi biryani and curries from Parivar.",
       },
       { property: "og:url", content: "https://parivar.restaurant/catering" },
       { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Royal Indian & Halal Catering Sydney - Parivar Restaurant" },
+      { name: "twitter:title", content: "Halal Indian Catering Sydney | Parivar Restaurant" },
       {
         name: "twitter:description",
         content:
-          "Award-winning Halal Indian & Mughlai catering in Sydney. Live tandoor, authentic dum biryani, and dessert buffets.",
+          "Halal Indian catering in Sydney for weddings, Eid gatherings, corporate events and birthdays. Hyderabadi biryani and curries from Parivar.",
       },
       { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
