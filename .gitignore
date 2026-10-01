@@ -55,14 +55,27 @@ node_modules
 *.sqlite
 *.sqlite3
 
-# AI agents, assistant tools, audit reports & scratch
+# AI agents, assistant tools, audit reports, specs & scratch
 .claude/
 .lovable/
 .agents/
 .gemini/
-*-AUDIT.md
-*audit*.md
+*-AUDIT*
+*audit*
+*AUDIT*
+parivaar.md
+report.html
+report.md
+seo-aeo-geo-content.md
 seo-audit-skill.md
 *.skill.md
 scratch/
 .playwright-mcp/
+
+# Loose root media dumps (assets belong in src/assets/ and public/)
+/*.mp4
+/*.mov
+/*.avi
+/Halal logo.png
+/Timeless Indian Flavours.png
+/backgroud.png
