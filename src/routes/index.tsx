@@ -15,26 +15,26 @@ import { FAQ, faqData } from "@/components/FAQ";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Parivar Restaurant Wiley Park | Halal Hyderabadi Biryani" },
+      { title: "Parivar Restaurant Wiley Park Sydney — 100% Halal Hyderabadi Indian Dining Open Until 3AM" },
       {
         name: "description",
         content:
-          "Halal Hyderabadi biryani, Mughlai curries and tandoori grills at Parivar, 1/83 King Georges Rd, Wiley Park. Open 3 PM to 3 AM daily. Dine in or takeaway.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai kebabs, and royal Nizami cuisine daily from 3PM until 3AM. Dine in, takeaway, and catering across Canterbury-Bankstown.",
       },
-      { property: "og:title", content: "Parivar Restaurant Wiley Park | Halal Hyderabadi Biryani" },
+      { property: "og:title", content: "Parivar Restaurant Wiley Park — 100% Halal Hyderabadi Indian, Open Until 3AM" },
       {
         property: "og:description",
         content:
-          "Halal Hyderabadi biryani, Mughlai curries and tandoori grills at Parivar, 1/83 King Georges Rd, Wiley Park. Open 3 PM to 3 AM daily. Dine in or takeaway.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai kebabs, and royal Nizami cuisine daily from 3PM until 3AM. Dine in, takeaway, and catering across Canterbury-Bankstown.",
       },
       { property: "og:url", content: "https://parivar.restaurant" },
       { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Parivar Restaurant Wiley Park | Halal Hyderabadi Biryani" },
+      { name: "twitter:title", content: "Parivar Restaurant Wiley Park — 100% Halal Hyderabadi Indian, Open Until 3AM" },
       {
         name: "twitter:description",
         content:
-          "Halal Hyderabadi biryani, Mughlai curries and tandoori grills at Parivar, 1/83 King Georges Rd, Wiley Park. Open 3 PM to 3 AM daily. Dine in or takeaway.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai kebabs, and royal Nizami cuisine daily from 3PM until 3AM. Dine in, takeaway, and catering across Canterbury-Bankstown.",
       },
       { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
     ],
@@ -82,6 +82,17 @@ export const Route = createFileRoute("/")({
               "closes": "03:00"
             }
           ],
+          "slogan": "100% Halal Hyderabadi Indian Dining in Sydney, Open Until 3AM",
+          "areaServed": [
+            "Wiley Park NSW 2195",
+            "Lakemba NSW 2195",
+            "Bankstown NSW 2200",
+            "Punchbowl NSW 2196",
+            "Greenacre NSW 2190",
+            "Roselands NSW 2196",
+            "Campsie NSW 2194",
+            "Canterbury-Bankstown, New South Wales, Australia"
+          ],
           "servesCuisine": ["Indian", "Hyderabadi", "Halal"],
           "priceRange": "$$",
           "hasMenu": "https://parivar.restaurant/menu",
@@ -100,6 +111,7 @@ export const Route = createFileRoute("/")({
           ],
           "amenityFeature": [
             { "@type": "LocationFeatureSpecification", "name": "Halal Certified", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Alcohol Free", "value": true },
             { "@type": "LocationFeatureSpecification", "name": "Late Night Dining", "value": true },
             { "@type": "LocationFeatureSpecification", "name": "Family Friendly", "value": true },
             { "@type": "LocationFeatureSpecification", "name": "Takeaway Available", "value": true },
@@ -140,6 +152,8 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://parivar.restaurant/#faq",
+          "datePublished": "2026-09-01",
+          "dateModified": "2026-10-31",
           "mainEntity": faqData.map((item) => ({
             "@type": "Question",
             "name": item.question,

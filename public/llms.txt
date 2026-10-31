@@ -19,7 +19,7 @@ Parivar Restaurant is a premier Indian restaurant situated in Wiley Park, South 
 - **Catering Services**: https://parivar.restaurant/catering
 - **Contact & Directions**: https://parivar.restaurant/contact
 - **Public Transit**: 300 meters (4-minute walk) from Wiley Park Railway Station (T3 Bankstown line).
-- **Google Maps Coordinates**: Latitude -33.9238, Longitude 151.0664
+- **Google Maps Coordinates**: Latitude -33.9189, Longitude 151.0667
 
 ## Operating Hours
 - Monday: 3:00 PM – 3:00 AM

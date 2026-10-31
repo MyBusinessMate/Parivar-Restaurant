@@ -607,6 +607,13 @@ export const Route = createFileRoute("/menu")({
         },
         { property: "og:url", content: canonicalUrl },
         { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: `${activeCat} Menu | Parivar Restaurant Wiley Park` },
+        {
+          name: "twitter:description",
+          content: `Discover Halal ${activeCat} at Parivar Restaurant, Wiley Park. Authentic Hyderabadi recipes prepared fresh daily. Dine-in & takeaway open 3 PM - 3 AM.`,
+        },
+        { name: "twitter:image", content: "https://parivar.restaurant/parivar-logo.png" },
       ],
       links: [
         {

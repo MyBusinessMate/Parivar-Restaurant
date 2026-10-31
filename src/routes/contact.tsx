@@ -80,8 +80,8 @@ export const Route = createFileRoute("/contact")({
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: -33.9238,
-            longitude: 151.0664,
+            latitude: -33.9189,
+            longitude: 151.0667,
           },
           openingHoursSpecification: [
             {
@@ -96,6 +96,20 @@ export const Route = createFileRoute("/contact")({
                 "Sunday",
               ],
               opens: "15:00",
+              closes: "23:59",
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "00:00",
               closes: "03:00",
             },
           ],

@@ -85,6 +85,9 @@ export function Hero() {
               Authentic Halal Hyderabadi &amp; Indian Dining in Wiley Park, Sydney
             </span>
           </motion.h1>
+          <p className="sr-only">
+            Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani and Mughlai dishes daily from 3PM until 3AM.
+          </p>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

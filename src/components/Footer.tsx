@@ -34,7 +34,7 @@ export function Footer() {
               +61 405 635 423
             </p>
             <p className="text-xs text-muted-foreground/80 mt-3 leading-relaxed">
-              Located in Wiley Park, Canterbury-Bankstown, serving authentic Halal Indian dining across South West Sydney.
+              Located at 1/83 King Georges Road, Wiley Park NSW 2195, serving authentic Halal dining to patrons across Canterbury-Bankstown, Lakemba, Punchbowl, Greenacre, Roselands, and Campsie.
             </p>
             <div className="mt-4">
               <a

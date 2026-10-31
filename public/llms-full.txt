@@ -9,7 +9,7 @@
 - Region: Canterbury-Bankstown, South West Sydney
 - Telephone: +61 405 635 423
 - Canonical Website: https://parivar.restaurant
-- Coordinates: Latitude -33.9238, Longitude 151.0664
+- Coordinates: Latitude -33.9189, Longitude 151.0667 (Wiley Park, Sydney)
 - Nearest Transit: Wiley Park Railway Station (300m / 4-minute walk, T3 Bankstown line)
 
 ## Direct Entity Summary

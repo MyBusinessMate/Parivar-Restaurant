@@ -45,7 +45,7 @@ export function About() {
             Every dish on our table tells an authentic story — of royal Nizami feasts, slow-simmered haleem, clay-tandoor charred kebabs, and delicate saffron-scented desserts. To dine with us is to experience warm Indian hospitality where every guest is welcomed as kin.
           </p>
           <p className="text-muted-foreground leading-loose mb-10">
-            Conveniently located at 1/83 King Georges Road, Wiley Park, Parivar is 100% Halal certified and open 7 days a week from 3:00 PM until 3:00 AM. Whether you join us for late-night family dining, pick up a fresh takeaway feast, or book bespoke catering for Sydney weddings and corporate celebrations, we bring genuine royal Nizami flavours to your table.
+            Conveniently located at 1/83 King Georges Road, Wiley Park NSW 2195, Parivar Restaurant serves 100% Halal-certified authentic Indian dining to patrons across Canterbury-Bankstown, Lakemba, Punchbowl, Greenacre, Roselands, Campsie, and South West Sydney. Open 7 days a week from 3:00 PM until 3:00 AM daily for dine-in, takeaway, and bespoke catering across Greater Sydney.
           </p>
 
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gold/20">

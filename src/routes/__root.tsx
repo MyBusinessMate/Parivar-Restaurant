@@ -79,29 +79,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Parivar Restaurant Wiley Park | Halal Hyderabadi Biryani" },
+      { title: "Parivar Restaurant Wiley Park Sydney | 100% Halal Hyderabadi Indian Dining" },
       {
         name: "description",
         content:
-          "Halal Hyderabadi biryani, Mughlai curries and tandoori grills at Parivar, 1/83 King Georges Rd, Wiley Park. Open 3 PM to 3 AM daily. Dine in or takeaway.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai curries, and tandoori grills daily from 3PM until 3AM. Dine in or takeaway.",
       },
       { name: "author", content: "Parivar Restaurant" },
-      { property: "og:title", content: "Parivar Restaurant Wiley Park | Halal Hyderabadi Biryani" },
+      { property: "og:title", content: "Parivar Restaurant Wiley Park Sydney | 100% Halal Hyderabadi Indian Dining" },
       {
         property: "og:description",
         content:
-          "Halal Hyderabadi biryani, Mughlai curries and tandoori grills at Parivar, 1/83 King Georges Rd, Wiley Park. Open 3 PM to 3 AM daily. Dine in or takeaway.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai curries, and tandoori grills daily from 3PM until 3AM. Dine in or takeaway.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Parivar Restaurant" },
       { property: "og:url", content: "https://parivar.restaurant" },
       { property: "og:image", content: "https://parivar.restaurant/parivar-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Parivar Restaurant Wiley Park | Halal Hyderabadi Biryani" },
+      { name: "twitter:title", content: "Parivar Restaurant Wiley Park Sydney | 100% Halal Hyderabadi Indian Dining" },
       {
         name: "twitter:description",
         content:
-          "Halal Hyderabadi biryani, Mughlai curries and tandoori grills at Parivar, 1/83 King Georges Rd, Wiley Park. Open 3 PM to 3 AM daily. Dine in or takeaway.",
+          "Parivar Restaurant in Wiley Park, Sydney serves 100% Halal-certified authentic Hyderabadi biryani, Mughlai curries, and tandoori grills daily from 3PM until 3AM. Dine in or takeaway.",
       },
       { name: "theme-color", content: "#042416" },
       { name: "geo.region", content: "AU-NSW" },

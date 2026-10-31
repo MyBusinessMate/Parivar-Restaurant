@@ -3,44 +3,64 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 
 export const faqData = [
   {
-    question: "Is Parivar Restaurant 100% Halal certified?",
+    question: "Is Parivar Restaurant 100% Halal certified and alcohol-free?",
     answer:
-      "Yes, Parivar Restaurant is strictly 100% Halal certified. All our meats (chicken, lamb, goat, and beef), ingredients, and traditional preparation methods comply fully with Islamic dietary laws.",
+      "Yes, Parivar Restaurant is strictly 100% Halal certified. All our meats (chicken, lamb, goat, and beef), ingredients, and traditional preparation methods comply fully with Islamic dietary laws. Our premises are completely alcohol-free and family-friendly.",
   },
   {
-    question: "What time does Parivar close and are you open late at night in Wiley Park?",
+    question: "What time does Parivar Restaurant close and are you open late at night in Wiley Park?",
     answer:
-      "Parivar Restaurant is open 7 days a week, Monday through Sunday, from 3:00 PM in the afternoon until 3:00 AM late at night. We offer full late-night dine-in and takeaway in Wiley Park.",
+      "Parivar Restaurant is open 7 days a week from 3:00 PM until 3:00 AM daily, including weekends and public holidays. We provide late-night dine-in, takeaway, and pickup for dinner and supper across South West Sydney.",
   },
   {
-    question: "Where is Parivar Restaurant located and what parking is available?",
+    question: "Where is Parivar Restaurant located and what parking or transit is available?",
     answer:
-      "We are located at 1/83 King Georges Rd, Wiley Park NSW 2195, in South West Sydney. Street parking is available nearby on King Georges Road and adjacent side streets, and we are within easy walking distance from Wiley Park railway station.",
+      "We are located at 1/83 King Georges Rd, Wiley Park NSW 2195. Free street parking is available along King Georges Road and adjacent residential streets. We are just 300 metres (a 4-minute walk) from Wiley Park railway station.",
   },
   {
-    question: "What are your signature Hyderabadi specialties?",
+    question: "What are Parivar's signature Hyderabadi specialties?",
     answer:
-      "Our most celebrated dishes include authentic slow-cooked Hyderabadi Dum Biryani, royal Hyderabadi Haleem, flame-charred Tandoori Chicken, Sheekh Kebabs, spicy Chicken 65, rich curries, and traditional desserts like Rasmalai and Shahi Tukda.",
+      "Our signature dishes include authentic slow-cooked Hyderabadi Dum Biryani sealed with dough, royal Hyderabadi Haleem, flame-charred Tandoori Chicken, juicy Seekh Kebabs, spicy Chicken 65, rich Mughlai curries, and traditional desserts like Rasmalai and Shahi Tukda.",
   },
   {
-    question: "Do you offer catering for weddings and corporate events across Sydney?",
+    question: "Does Parivar Restaurant offer takeaway to Lakemba, Bankstown, Punchbowl, and Greenacre?",
     answer:
-      "Yes, Parivar provides full-service Indian and Mughlai catering for weddings, receptions, corporate galas, and private celebrations across Greater Sydney. Packages include live tandoori grills, dum biryani handis, and dessert banquets.",
+      "Yes. Parivar Restaurant offers convenient online takeaway ordering directly through our website with pickup from our Wiley Park location. We proudly serve patrons across Canterbury-Bankstown, Lakemba, Punchbowl, Greenacre, Roselands, and Campsie.",
+  },
+  {
+    question: "Does Parivar offer vegetarian, nut-free, or gluten-free Indian dishes?",
+    answer:
+      "Yes, we offer delicious vegetarian dishes including Daal Tadka, Paneer Tikka Masala, and Mixed Vegetable Curry. Guests with severe nut or gluten allergies should inform our team when ordering, as our kitchen prepares traditional Mughlai recipes containing dairy, wheat, and nuts.",
+  },
+  {
+    question: "What Indian wedding and event catering packages does Parivar offer across Sydney?",
+    answer:
+      "Parivar provides full-service Halal Indian catering for weddings, receptions, corporate galas, and celebrations across Greater Sydney. Packages feature live tandoori grills, dum biryani handis, chaat stations, and royal Mughlai dessert banquets tailored to your guest count.",
+  },
+  {
+    question: "Does Parivar serve Sehri and Iftar meals during Ramadan?",
+    answer:
+      "Yes. Parivar Restaurant is open daily from 3:00 PM until 3:00 AM, making it the premier late-night destination for Iftar dinners and late-night Sehri meals during Ramadan in Wiley Park, Lakemba, and the wider Canterbury-Bankstown region.",
+  },
+  {
+    question: "Is Parivar Restaurant alcohol-free and suitable for families?",
+    answer:
+      "Yes. Parivar Restaurant is 100% alcohol-free and dedicated to providing a warm, family-friendly atmosphere. We welcome families, children, and large community gatherings seeking genuine royal Indian hospitality in a relaxed, culturally respectful setting.",
+  },
+  {
+    question: "Can curry and biryani heat levels be customised at Parivar Restaurant?",
+    answer:
+      "Yes. Most of our curries and dishes can be customized for mild, medium, or spicy heat levels. Please notify our staff or specify your spice preference in your online order notes, and our chefs will accommodate your taste.",
   },
   {
     question: "Can I order online for takeaway or dine-in table ordering?",
     answer:
-      "Yes, our complete menu is available for online ordering directly on our website. You can select takeaway for quick pickup from Wiley Park or specify your table number for direct table service with live status tracking.",
+      "Yes. Our complete menu is available for online ordering on our website. You can place takeaway orders for quick collection or scan and order directly to your dine-in table with real-time digital status tracking.",
   },
   {
-    question: "Does Parivar offer vegetarian dishes?",
+    question: "Do you accept advance table reservations and private function bookings?",
     answer:
-      "Yes, Parivar offers a curated selection of vegetarian dishes including Daal Tadka, Mixed Vegetable Curry, Paneer Tikka Masala, vegetable samosas, and freshly baked tandoori naan breads.",
-  },
-  {
-    question: "Can spice levels be adjusted for curries and biryanis?",
-    answer:
-      "Most curries can be adjusted for mild, medium, or spicy heat upon request. Please mention your spice preferences to our team or note them during online ordering.",
+      "Yes. We welcome advance table reservations for family dinners, birthdays, and group celebrations. To reserve your table or discuss private dining arrangements in Wiley Park, contact our team directly via phone or WhatsApp at +61 405 635 423.",
   },
 ];
 
